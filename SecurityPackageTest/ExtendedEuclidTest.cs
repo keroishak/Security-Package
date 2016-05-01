@@ -4,7 +4,6 @@ using SecurityLibrary.AES;
 
 namespace SecurityPackageTest
 {
-    [Ignore]
     [TestClass]
     public class ExtendedEuclidTest
     {
@@ -15,7 +14,6 @@ namespace SecurityPackageTest
             int res = algorithm.GetMultiplicativeInverse(23, 26);
             Assert.AreEqual(res, 17);
         }
-
         [TestMethod]
         public void ExtendedEuclidTest2()
         {
@@ -23,6 +21,12 @@ namespace SecurityPackageTest
             int res = algorithm.GetMultiplicativeInverse(22, 26);
             Assert.AreEqual(res, -1);
         }
-
+        [TestMethod]
+        public void ExtendedEuclidTest3()
+        {
+            ExtendedEuclid algorithm = new ExtendedEuclid();
+            int res = algorithm.GetMultiplicativeInverse(7, 160);
+            Assert.AreEqual(res, 23);
+        }
     }
 }
