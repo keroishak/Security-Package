@@ -4,7 +4,6 @@ using SecurityLibrary.MD5;
 
 namespace SecurityPackageTest
 {
-    [Ignore]
     [TestClass]
     public class MD5Test
     {

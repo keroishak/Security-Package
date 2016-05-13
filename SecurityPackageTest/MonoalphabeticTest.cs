@@ -10,7 +10,7 @@ namespace SecurityPackageTest
     [TestClass]
     public class MonoalphabeticTest
     {
-        string mainPlain = "meetmeafterthetogaparty";
+        string mainPlain =  "meetmeafterthetogaparty";
         string mainCipher = "phhwphdiwhuwkhwrjdsduwb".ToUpper();
         string mainKey = "defghijklmnopqrstuvwxyzabc";
 
@@ -133,13 +133,13 @@ namespace SecurityPackageTest
         [TestMethod]
         public void MonoTestAnalysisFrequency()
         {
-            /*Monoalphabetic algorithm = new Monoalphabetic();
+            Monoalphabetic algorithm = new Monoalphabetic();
             string plain = algorithm.AnalyseUsingCharFrequency(largeCipher);
             
             int count = Enumerable.Range(0, largePlain.Length)
                  .Count(i => largePlain[i] == plain[i]);
            
-            Assert.IsTrue(count * 100 / largePlain.Length > 70);*/
+            Assert.IsTrue(count * 100 / largePlain.Length > 70);
         }
     }
 }

@@ -50,22 +50,22 @@
             this.label2 = new System.Windows.Forms.Label();
             this.RSA_Input = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.AESInputTextBox = new System.Windows.Forms.TextBox();
-            this.AESKeyTextBox = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.AESOutputTextBox = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.AESEncryptionButton = new System.Windows.Forms.Button();
             this.AESDecryptionButton = new System.Windows.Forms.Button();
-            this.ExtendedNumber = new System.Windows.Forms.TextBox();
-            this.ExtendedBase = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.ExtendedResult = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
+            this.AESEncryptionButton = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.AESOutputTextBox = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.AESKeyTextBox = new System.Windows.Forms.TextBox();
+            this.AESInputTextBox = new System.Windows.Forms.TextBox();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.button4 = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.ExtendedResult = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.ExtendedBase = new System.Windows.Forms.TextBox();
+            this.ExtendedNumber = new System.Windows.Forms.TextBox();
             this.tabController1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -304,6 +304,77 @@
             this.tabPage3.Text = "AES";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // AESDecryptionButton
+            // 
+            this.AESDecryptionButton.Location = new System.Drawing.Point(593, 377);
+            this.AESDecryptionButton.Name = "AESDecryptionButton";
+            this.AESDecryptionButton.Size = new System.Drawing.Size(99, 57);
+            this.AESDecryptionButton.TabIndex = 7;
+            this.AESDecryptionButton.Text = "Decrypt";
+            this.AESDecryptionButton.UseVisualStyleBackColor = true;
+            this.AESDecryptionButton.Click += new System.EventHandler(this.AESDecryptionButton_Click);
+            // 
+            // AESEncryptionButton
+            // 
+            this.AESEncryptionButton.Location = new System.Drawing.Point(413, 377);
+            this.AESEncryptionButton.Name = "AESEncryptionButton";
+            this.AESEncryptionButton.Size = new System.Drawing.Size(99, 57);
+            this.AESEncryptionButton.TabIndex = 6;
+            this.AESEncryptionButton.Text = "Encrypt";
+            this.AESEncryptionButton.UseVisualStyleBackColor = true;
+            this.AESEncryptionButton.Click += new System.EventHandler(this.EncryptionButton_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(22, 311);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(42, 13);
+            this.label9.TabIndex = 5;
+            this.label9.Text = "Output:";
+            // 
+            // AESOutputTextBox
+            // 
+            this.AESOutputTextBox.Location = new System.Drawing.Point(108, 289);
+            this.AESOutputTextBox.Multiline = true;
+            this.AESOutputTextBox.Name = "AESOutputTextBox";
+            this.AESOutputTextBox.Size = new System.Drawing.Size(828, 50);
+            this.AESOutputTextBox.TabIndex = 4;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(22, 139);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(28, 13);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "Key:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(22, 61);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(34, 13);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "Input:";
+            // 
+            // AESKeyTextBox
+            // 
+            this.AESKeyTextBox.Location = new System.Drawing.Point(108, 119);
+            this.AESKeyTextBox.Multiline = true;
+            this.AESKeyTextBox.Name = "AESKeyTextBox";
+            this.AESKeyTextBox.Size = new System.Drawing.Size(828, 50);
+            this.AESKeyTextBox.TabIndex = 1;
+            // 
+            // AESInputTextBox
+            // 
+            this.AESInputTextBox.Location = new System.Drawing.Point(108, 43);
+            this.AESInputTextBox.Multiline = true;
+            this.AESInputTextBox.Name = "AESInputTextBox";
+            this.AESInputTextBox.Size = new System.Drawing.Size(828, 50);
+            this.AESInputTextBox.TabIndex = 0;
+            // 
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.button4);
@@ -321,115 +392,15 @@
             this.tabPage4.Text = "ExtendedEuclidean";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // AESInputTextBox
+            // button4
             // 
-            this.AESInputTextBox.Location = new System.Drawing.Point(108, 43);
-            this.AESInputTextBox.Multiline = true;
-            this.AESInputTextBox.Name = "AESInputTextBox";
-            this.AESInputTextBox.Size = new System.Drawing.Size(828, 50);
-            this.AESInputTextBox.TabIndex = 0;
-            // 
-            // AESKeyTextBox
-            // 
-            this.AESKeyTextBox.Location = new System.Drawing.Point(108, 119);
-            this.AESKeyTextBox.Multiline = true;
-            this.AESKeyTextBox.Name = "AESKeyTextBox";
-            this.AESKeyTextBox.Size = new System.Drawing.Size(828, 50);
-            this.AESKeyTextBox.TabIndex = 1;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(22, 61);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(34, 13);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "Input:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(22, 139);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(28, 13);
-            this.label8.TabIndex = 3;
-            this.label8.Text = "Key:";
-            // 
-            // AESOutputTextBox
-            // 
-            this.AESOutputTextBox.Location = new System.Drawing.Point(108, 289);
-            this.AESOutputTextBox.Multiline = true;
-            this.AESOutputTextBox.Name = "AESOutputTextBox";
-            this.AESOutputTextBox.Size = new System.Drawing.Size(828, 50);
-            this.AESOutputTextBox.TabIndex = 4;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(22, 311);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(42, 13);
-            this.label9.TabIndex = 5;
-            this.label9.Text = "Output:";
-            // 
-            // AESEncryptionButton
-            // 
-            this.AESEncryptionButton.Location = new System.Drawing.Point(413, 377);
-            this.AESEncryptionButton.Name = "AESEncryptionButton";
-            this.AESEncryptionButton.Size = new System.Drawing.Size(99, 57);
-            this.AESEncryptionButton.TabIndex = 6;
-            this.AESEncryptionButton.Text = "Encrypt";
-            this.AESEncryptionButton.UseVisualStyleBackColor = true;
-            this.AESEncryptionButton.Click += new System.EventHandler(this.EncryptionButton_Click);
-            // 
-            // AESDecryptionButton
-            // 
-            this.AESDecryptionButton.Location = new System.Drawing.Point(593, 377);
-            this.AESDecryptionButton.Name = "AESDecryptionButton";
-            this.AESDecryptionButton.Size = new System.Drawing.Size(99, 57);
-            this.AESDecryptionButton.TabIndex = 7;
-            this.AESDecryptionButton.Text = "Decrypt";
-            this.AESDecryptionButton.UseVisualStyleBackColor = true;
-            this.AESDecryptionButton.Click += new System.EventHandler(this.AESDecryptionButton_Click);
-            // 
-            // ExtendedNumber
-            // 
-            this.ExtendedNumber.Location = new System.Drawing.Point(225, 81);
-            this.ExtendedNumber.Name = "ExtendedNumber";
-            this.ExtendedNumber.Size = new System.Drawing.Size(100, 20);
-            this.ExtendedNumber.TabIndex = 0;
-            // 
-            // ExtendedBase
-            // 
-            this.ExtendedBase.Location = new System.Drawing.Point(548, 85);
-            this.ExtendedBase.Name = "ExtendedBase";
-            this.ExtendedBase.Size = new System.Drawing.Size(100, 20);
-            this.ExtendedBase.TabIndex = 1;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(459, 88);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(34, 13);
-            this.label10.TabIndex = 2;
-            this.label10.Text = "Base:";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(127, 84);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(47, 13);
-            this.label11.TabIndex = 3;
-            this.label11.Text = "Number:";
-            // 
-            // ExtendedResult
-            // 
-            this.ExtendedResult.Location = new System.Drawing.Point(393, 224);
-            this.ExtendedResult.Name = "ExtendedResult";
-            this.ExtendedResult.Size = new System.Drawing.Size(100, 20);
-            this.ExtendedResult.TabIndex = 4;
+            this.button4.Location = new System.Drawing.Point(373, 368);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(133, 57);
+            this.button4.TabIndex = 6;
+            this.button4.Text = "Calculate";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // label12
             // 
@@ -440,15 +411,44 @@
             this.label12.TabIndex = 5;
             this.label12.Text = "Result";
             // 
-            // button4
+            // ExtendedResult
             // 
-            this.button4.Location = new System.Drawing.Point(373, 368);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(133, 57);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "Calculate";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.ExtendedResult.Location = new System.Drawing.Point(393, 224);
+            this.ExtendedResult.Name = "ExtendedResult";
+            this.ExtendedResult.Size = new System.Drawing.Size(100, 20);
+            this.ExtendedResult.TabIndex = 4;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(127, 84);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(47, 13);
+            this.label11.TabIndex = 3;
+            this.label11.Text = "Number:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(459, 88);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(34, 13);
+            this.label10.TabIndex = 2;
+            this.label10.Text = "Base:";
+            // 
+            // ExtendedBase
+            // 
+            this.ExtendedBase.Location = new System.Drawing.Point(548, 85);
+            this.ExtendedBase.Name = "ExtendedBase";
+            this.ExtendedBase.Size = new System.Drawing.Size(100, 20);
+            this.ExtendedBase.TabIndex = 1;
+            // 
+            // ExtendedNumber
+            // 
+            this.ExtendedNumber.Location = new System.Drawing.Point(225, 81);
+            this.ExtendedNumber.Name = "ExtendedNumber";
+            this.ExtendedNumber.Size = new System.Drawing.Size(100, 20);
+            this.ExtendedNumber.TabIndex = 0;
             // 
             // Form1
             // 
