@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SecurityLibrary;
+using System.Linq;
 
 namespace SecurityPackageTest
 {
@@ -23,7 +24,7 @@ namespace SecurityPackageTest
 
 
         [TestMethod]
-        public void PlayfairTest1()
+        public void PlayfairTestEnc1()
         {
             PlayFair algorithm = new PlayFair();
             string cipher = algorithm.Encrypt(mainPlain, mainKey);
@@ -31,23 +32,16 @@ namespace SecurityPackageTest
         }
 
         [TestMethod]
-        public void PlayfairTest2()
+        public void PlayfairTestDec1()
         {
             PlayFair algorithm = new PlayFair();
             string plain = algorithm.Decrypt(mainCipher, mainKey);
             Assert.IsTrue(plain.Equals(mainPlain, StringComparison.InvariantCultureIgnoreCase));
         }
 
+     
         [TestMethod]
-        public void PlayfairTest3()
-        {
-            PlayFair algorithm = new PlayFair();
-            string key = algorithm.Analyse(mainPlain, mainCipher);
-            Assert.IsTrue(key.Equals(mainKey, StringComparison.InvariantCultureIgnoreCase));
-        }
-
-        [TestMethod]
-        public void PlayfairTest4()
+        public void PlayfairTestEnc2()
         {
             PlayFair algorithm = new PlayFair();
             string cipher = algorithm.Encrypt(mainPlain1, mainKey1);
@@ -55,7 +49,7 @@ namespace SecurityPackageTest
         }
 
         [TestMethod]
-        public void PlayfairTest5()
+        public void PlayfairTestDec2()
         {
             PlayFair algorithm = new PlayFair();
             string plain = algorithm.Decrypt(mainCipher1, mainKey1);
@@ -63,7 +57,7 @@ namespace SecurityPackageTest
         }
 
         [TestMethod]
-        public void PlayfairTest6()
+        public void PlayfairTestEnc3()
         {
             PlayFair algorithm = new PlayFair();
             string cipher = algorithm.Encrypt(mainPlain2, mainKey2);
@@ -72,12 +66,49 @@ namespace SecurityPackageTest
         }
 
         [TestMethod]
-        public void PlayfairTest7()
+        public void PlayfairTestDec3()
         {
             PlayFair algorithm = new PlayFair();
             string plain = algorithm.Decrypt(mainCipher2, mainKey2);
             Assert.IsTrue(plain.Equals(mainPlain2, StringComparison.InvariantCultureIgnoreCase) ||
                 plain.Equals(mainPlain22, StringComparison.InvariantCultureIgnoreCase));
         }
+
+        string largePlain = "theplayfaircipherusesafivebyfivetablecontainingakeywordorphrasememorizationofthekeywordandfoursimpleruleswasallthatwasrequiredtocreatethefivebyfivetableandusetheciphexlrckhtbrvmbrkhqcrxlrckhtbavheleeatgteenetnwembpqewovtdfheufiknylinthespacesinthetablewiththelettersofthekeyworddroppinganyduplicatelettersthenfilltheremainingspaceswiththerestofthelettersofthealphabetinorderusuallyiandhzittfcsoncapsegteeniohwqdpueityitintfexceruwsoftfdnpelbeoslldhtyvtorightorinsomeotherpatternsuchasaspiralbeginningintheupperlefthandcornerandendinginthecenterthekeywordtogetherwiththeconventionsforfillinginthefivebyfivetableconstitutethecipherkeyxlrckhtbrvmbrkhqcroencryptamessageonewouldbreakthemessageintodigramsgroupsoxlrckhtbemblyvterssuchthatforexamplexlrckhtbrenzloworlxlrckhtbrbecoqrvmbrkhqcrhelloworlxlrckhtbrvmbrkhqcrndmapthemoutonthekeytablxlrckhtbegkmdederxmbrkhqcrppendanuncommonmonogramtocompletethefinaldigraxlrckhtbbmhzetwolettersofthedigramareconsideredastheoppositecornersofarectangleinthekeytablexlrckhtbrctetedrdlwletavosinholohtferooksnrsofthisrectanglxlrckhtbbmhenopdzytiehslzlwrnlgisuurrulexlrckhtbbglwcdplmbrkhqcrtoeachpairoflettersintheplaintextmslxmbrkhqcrfbothlettersarethesamexlrckhtbrcwltvoqenblyvterislefxlrckhtbrvmbrkhqcrddaxlrckhtbrvmbrkhqcrafterthefirstlettexlrckhtbrdkorvsqxtheqewpphbwndboqnftvzmbrkhqcrxlrckhtbrvmbrkhqcrfthelettersappearonthesamerowofyourtablxlrckhtbbvreplacethemwiththeletterstotheirimmediaterightrespectivelyxlrckhtbbvrappingaroundtotheleftsideoftherowifaletterintheoriginalpairwasontherightsideoftheroxlrckhtbbmsmifthelettersappearonthesamecolumnofyourtablexlrckhtbreatorblgeqenmhtfekeyvtersimmediatelybelowrespectivelyxlrckhtbbvrappingaroundtothetopsideofthecolumnifaletterintheoriginalpairwasonthebottomsideofthecolumnmslxmbrkhqcrfthelettersarenotonthesameroworcolumnxlrckhtbreatorblgeqenmhtfekeyvtersonthesamerowrespectivelybutattheotherpairofcornersoftherectangledefinedbytheoriginalpaixlrckhtbbmhzeorderisimportanxlrckhtbbmfeikewmqblyvteroftheencryptedpairistheonethatliesonthesamerowasthefirstletteroftheplaintextpaixlrckhtbrvmbrkhqcrodecryptxlrckhtbeashiegtubearxmbrkhqcrppositexlrckhtbegtfdnowlxmbrkhqcrulesxlrckhtbagshfzmbrkhqcrstasxlrckhtbrvmbrkhqcrdroppinganyextraxlrckhtbrvmbrkhqcrxlrckhtbrvmbrkhqcrxlrckhtbeamhanbokoyuemezsndbittfdhgtanhswsohbahcmkitbslbshsmxlrckhtbbv";
+        string largeCipher = "NKROMPUIWGDEFWKBFPOBWSGKZDCXGKZDMORNRESTMOHQHQMDTKWCPEEAFRFBSWDTDTPEKYOMKWTSKLKBTKWCPEGDMBKPPFWHLATRFPTRWOSWPMMLGSQOSWDRLYFCRBZEEDDOZKNKRKGYRCUIGYKZSDTRSMRVOBNKREFWKBUNDEFINEDUNDEFINEDUNDEFINEDAKBTRDOMKZKBTKZQSDTRSTCOPZMRGKBPLKFQXQFQLKBWAWDBOHQNKKZSDTRCQNKNKRTKZZKBPPKNKKTCZOPDBBDPAWFMHSMVCPRQFDWZKTRNZZKBPNKBTGKNUMLKBDRVDHQHQHAASERWOKQKNKBDRONPKNKRTKZZKBPPKNKDOURGSCRQKTSDBRDXPVPNUQUGWMBKXKQLKBWSTDWAWDKZKBTKWISMCRPCKQZKQHQLKBZERFPOWPKLKBMORNRKEPNMRKNZXZECFHIZECFXBATKENKRDASNZZKBLPXBISWSWWFDPNRDKHQQHMHHQNKRZSUORFURKNKSMBEPETBDPMBBTCGMHHQNKREBTZKELKBTKWCPEEMAKKZKBCPKQKNKBEWMXBTQKSTPHPEGKNUQFMHHQNKRKGYRCUIGYKZSDTREWXBQKLZZKNKREFWKBEFCZUNDEFINEDUNDEFINEDEKQBCUOLDVBOWSKDSTCOPZMRCDDOTZKBTDBSWSKDHQZECGFDDVAHEPPRWPUNDEFINEDTRNZXZKBPPXBINKOMKPDRVSLATRUNDEFINEDRTXTPOPFUUNDEFINEDCREWTDUNDEFINEDKBNUTPOPFUUNDEFINEDUNDEFINEDMBVDOLKBTAZLSTNKKTCZMORNUNDEFINEDKGTBRBRBUNDEFINEDSUORMBSMXLEWNVTAQNSTAKDPNLWEATRUKZKZKBGKMSMRKHDPUNDEFINEDNKXKZOPTRNZZKBPPKNKRBKHDPVDDREWXBGCRDRBSWNKKESUAPWHZKEWBLRDWPGPDREQSMFMCKQLKBTKZQSDTRUNDEFINEDEZKZKBDRMPQKZDAPWHQKSTPKNKREPETBXBPPKNKHWDREQSMFMUNDEFINEDNKBTSARUZQKBKPNUTPCQMHKPXPFFPTRUNDEFINEDHQPEBRUNDEFINEDZEDOBIASFCPKTRNZZKBPHQNKROMPHQZKZNNANUNDEFINEDHREZFNKZZKBPPDKZKBWSTDUNDEFINEDEPQMZWTBTRNZXZKCFPNRKUNDEFINEDUNDEFINEDBVGDUNDEFINEDUNDEFINEDPGZKELKBGKBPLMKZZKUNDEFINEDBTEDUWNZNKBTCOASFCSMBESTQKLXUNDEFINEDUNDEFINEDUNDEFINEDKLKBTRNZZKBPSAORPDSTNKBODVRDPOPKZWPFMORNUNDEFINEDXDRRUWDKZKBQAKQKNKBTRNZZKBPZENKCKCFNVTDCGOMRDKHKNDRWAREQKZDQUUNDEFINEDXDPSUWFMHPDPZMBZENKRTRKNOGCKEKLKBEPCQGPTRNZZKCFQLKBPEKHHQPMASFCOSWPQLKBCFHINOGCKEKLKBEPUNDEFINEDNANKGNKRTKZZKBPSAORPDSTNKBODVREPTVLTSIUPZELSDTRUNDEFINEDROMPERNKDTCQNKNKRTKZXZKBPGQTDCGOMRTXCRTPODRWAREQKZDQUUNDEFINEDXDPSUWFMHPDPZMBZENKKZPAWHBRPKNKREPTVLQHGPTRNZZKCFQLKBPEKHHQPMASFCOSWPQLKBESNZZENAGCKEKLKBEWUPNQNANUNDEFINEDKLKBTRNZZKBPPDBTEZSTNKBODVRDPOPEEWUPNQUNDEFINEDROMPERNKDTCQNKNKRTKZXZKBPSTNKBODVRDPODRWAREQKZDQURXMONZNKKENKRDASFCPKEWBLRDWPKLKBDREQSMFMRBRKHQRBCXNKKECFHKMSURWGUNDEFINEDNKXKEDBRDHWGQAPELSMUNDEFINEDNKRKFCONTRNZXZKEPKLKBBTEDUWZKRAWGCFONKBSTKZGSLMKCWPQLKBWSTDEPOSONKBGKBPLMKZZKEPKLKBRUWGQLBZLOWGUNDEFINEDUNDEFINEDAERECUOLUNDEFINEDOBNKCKMXRDOBUNDEFINEDSUAPWHZKUNDEFINEDKLKBMPONUNDEFINEDPUBOUNDEFINEDMBNKUNDEFINEDONSWUNDEFINEDUNDEFINEDBDPAWFMHSMZCZNDPUNDEFINEDUNDEFINEDUNDEFINEDUNDEFINEDUNDEFINEDONGSMESTEZVDTKOBXBCKQLKBGKMSMNBOWSKDSIBTGKQHBNRBNANUNDEFINEDX";
+
+
+        string largePlainForAnlysis = "THEPLAYFAIRCIPHERUSESAFIVEBYFIVETABLECONTAININGAKEYWORDORPHRASEMEMORIZATIONOFTHEKEYWORDANDFOURSIMPLERULESWASALLTHATWASREQUIREDTOCREATETHEFIVEBYFIVETABLEANDUSETHECIPHEXLRCKHTBRVMBRKHQCRXLRCKHTBAVHELEEATGTEENETNWEMBPQEWOVTDFHEUFIKNYLINTHESPACESINTHETABLEWITHTHELETTERSOFTHEKEYWORDDROPPINGANYDUPLICATELETXTERSTHENFILXLTHEREMAININGSPACESWITHTHERESTOFTHELETTERSOFTHEALPHABETINORDERUSUALXLYIANDHZITTFCSONCAPSEGTEENIOHWQDPUEITYITINTFEXCERUWSOFTFDNPELBEOSLLDHTYVTORIGHTORINSOMEOTHERPATXTERNSUCHASASPIRALBEGINNINGINTHEUPXPERLEFTHANDCORNERANDENDINGINTHECENTERTHEKEYWORDTOGETHERWITHTHECONVENTIONSFORFILXLINGINTHEFIVEBYFIVETABLECONSTITUTETHECIPHERKEYXLRCKHTBRVMBRKHQCROENCRYPTAMESSAGEONEWOULDBREAKTHEMESXSAGEINTODIGRAMSGROUPSOXLRCKHTBEMBLYVTERSSUCHTHATFOREXAMPLEXLRCKHTBRENZLOWORLXLRCKHTBRBECOQRVMBRKHQCRHELXLOWORLXLRCKHTBRVMBRKHQCRNDMAPTHEMOUTONTHEKEYTABLXLRCKHTBEGKMDEDERXMBRKHQCRPXPENDANUNCOMXMONMONOGRAMTOCOMPLETETHEFINALDIGRAXLRCKHTBBMHZETWOLETXTERSOFTHEDIGRAMARECONSIDEREDASTHEOPXPOSITECORNERSOFARECTANGLEINTHEKEYTABLEXLRCKHTBRCTETEDRDLWLETAVOSINHOLOHTFEROOKSNRSOFTHISRECTANGLXLRCKHTBBMHENOPDZYTIEHSLZLWRNLGISUURRULEXLRCKHTBBGLWCDPLMBRKHQCRTOEACHPAIROFLETXTERSINTHEPLAINTEXTMSLXMBRKHQCRFBOTHLETTERSARETHESAMEXLRCKHTBRCWLTVOQENBLYVTERISLEFXLRCKHTBRVMBRKHQCRDXDAXLRCKHTBRVMBRKHQCRAFTERTHEFIRSTLETTEXLRCKHTBRDKORVSQXTHEQEWPPHBWNDBOQNFTVZMBRKHQCRXLRCKHTBRVMBRKHQCRFTHELETXTERSAPPEARONTHESAMEROWOFYOURTABLXLRCKHTBBVREPLACETHEMWITHTHELETXTERSTOTHEIRIMXMEDIATERIGHTRESPECTIVELYXLRCKHTBBVRAPXPINGAROUNDTOTHELEFTSIDEOFTHEROWIFALETXTERINTHEORIGINALPAIRWASONTHERIGHTSIDEOFTHEROXLRCKHTBBMSMIFTHELETTERSAPPEARONTHESAMECOLUMNOFYOURTABLEXLRCKHTBREATORBLGEQENMHTFEKEYVTERSIMMEDIATELYBELOWRESPECTIVELYXLRCKHTBBVRAPXPINGAROUNDTOTHETOPSIDEOFTHECOLUMNIFALETXTERINTHEORIGINALPAIRWASONTHEBOTXTOMSIDEOFTHECOLUMNMSLXMBRKHQCRFTHELETXTERSARENOTONTHESAMEROWORCOLUMNXLRCKHTBREATORBLGEQENMHTFEKEYVTERSONTHESAMEROWRESPECTIVELYBUTATXTHEOTHERPAIROFCORNERSOFTHERECTANGLEDEFINEDBYTHEORIGINALPAIXLRCKHTBBMHZEORDERISIMPORTANXLRCKHTBBMFEIKEWMQBLYVTEROFTHEENCRYPTEDPAIRISTHEONETHATLIESONTHESAMEROWASTHEFIRSTLETTEROFTHEPLAINTEXTPAIXLRCKHTBRVMBRKHQCRODECRYPTXLRCKHTBEASHIEGTUBEARXMBRKHQCRPXPOSITEXLRCKHTBEGTFDNOWLXMBRKHQCRULESXLRCKHTBAGSHFZMBRKHQCRSTASXLRCKHTBRVMBRKHQCRDROPPINGANYEXTRAXLRCKHTBRVMBRKHQCRXLRCKHTBRVMBRKHQCRXLRCKHTBEAMHANBOKOYUEMEZSNDBITTFDHGTANHSWSOHBAHCMKITBSLBSHSMXLRCKHTBBV".ToLower();
+
+        string largeKey = "pasword";
+
+        [TestMethod]
+        public void PlayfairTestEnc4()
+        {
+            PlayFair algorithm = new PlayFair();
+            string cipher = algorithm.Encrypt(largePlain, largeKey);
+            Assert.IsTrue(cipher.Equals(largeCipher, StringComparison.InvariantCultureIgnoreCase));
+        }
+
+        [TestMethod]
+        public void PlayfairTestDec4()
+        {
+            PlayFair algorithm = new PlayFair();
+            string plain = algorithm.Decrypt(largeCipher, largeKey);
+            Assert.IsTrue(plain.Equals(largePlain, StringComparison.InvariantCultureIgnoreCase));
+        }
+
+        [TestMethod]
+        public void PlayfairTestBonusAnalysis()
+        {
+            /*PlayFair algorithm = new PlayFair();
+            //string plain = algorithm.Analyse(largeCipher);
+            int count = Enumerable.Range(0, largePlainForAnlysis.Length)
+              .Count(i => largePlainForAnlysis[i] == plain[i]);
+
+            Assert.IsTrue(count * 100 / largePlain.Length > 50);*/
+        }
+
+       
     }
-}
+}                                                   

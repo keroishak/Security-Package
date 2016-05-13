@@ -22,7 +22,7 @@ namespace SecurityPackageTest
         List<string> mainKeyTriple =  new List<string>() {"0x133457799BBCDFF1", "0x133457799BBCDFF1" };
 
         [TestMethod]
-        public void DESTest1()
+        public void DESTestEnc1()
         {
             DES algorithm = new DES();
             string cipher = algorithm.Encrypt(mainPlain, mainKey);
@@ -30,7 +30,7 @@ namespace SecurityPackageTest
         }
 
         [TestMethod]
-        public void DESTest2()
+        public void DESTestDec1()
         {
             DES algorithm = new DES();
             string plain = algorithm.Decrypt(mainCipher, mainKey);
@@ -38,7 +38,7 @@ namespace SecurityPackageTest
         }
 
         [TestMethod]
-        public void DESTest3()
+        public void DESTestEnc2()
         {
             DES algorithm = new DES();
             string cipher = algorithm.Encrypt(mainPlain2, mainKey2);
@@ -46,7 +46,7 @@ namespace SecurityPackageTest
         }
 
         [TestMethod]
-        public void DESTest4()
+        public void DESTestDec2()
         {
             DES algorithm = new DES();
             string plain = algorithm.Decrypt(mainCipher2, mainKey2);
@@ -54,7 +54,7 @@ namespace SecurityPackageTest
         }
 
         [TestMethod]
-        public void TripleDESTest1()
+        public void TripleDESTestEnc1()
         {
             TripleDES algorithm = new TripleDES();
             string cipher = algorithm.Encrypt(mainPlainTriple, mainKeyTriple);
@@ -62,7 +62,7 @@ namespace SecurityPackageTest
         }
 
         [TestMethod]
-        public void TripleDESTest2()
+        public void TripleDESTestDec1()
         {
             TripleDES algorithm = new TripleDES();
             string plain = algorithm.Decrypt(mainCipherTriple, mainKeyTriple);

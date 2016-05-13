@@ -14,6 +14,7 @@ namespace SecurityPackageTest
             int res = algorithm.GetMultiplicativeInverse(23, 26);
             Assert.AreEqual(res, 17);
         }
+
         [TestMethod]
         public void ExtendedEuclidTest2()
         {
@@ -21,12 +22,45 @@ namespace SecurityPackageTest
             int res = algorithm.GetMultiplicativeInverse(22, 26);
             Assert.AreEqual(res, -1);
         }
+
         [TestMethod]
         public void ExtendedEuclidTest3()
         {
             ExtendedEuclid algorithm = new ExtendedEuclid();
-            int res = algorithm.GetMultiplicativeInverse(7, 160);
-            Assert.AreEqual(res, 23);
+            int res = algorithm.GetMultiplicativeInverse(50, 71);
+            Assert.AreEqual(res, 27);
+        }
+
+        [TestMethod]
+        public void ExtendedEuclidTest4()
+        {
+            ExtendedEuclid algorithm = new ExtendedEuclid();
+            int res = algorithm.GetMultiplicativeInverse(43, 64);
+            Assert.AreEqual(res, 3);
+        }
+
+        [TestMethod]
+        public void ExtendedEuclidTest5()
+        {
+            ExtendedEuclid algorithm = new ExtendedEuclid();
+            int res = algorithm.GetMultiplicativeInverse(1111, 22222);
+            Assert.AreEqual(res, 11101);
+        }
+
+        [TestMethod]
+        public void ExtendedEuclidTest6()
+        {
+            ExtendedEuclid algorithm = new ExtendedEuclid();
+            int res = algorithm.GetMultiplicativeInverse(123456789, 1236);
+            Assert.AreEqual(res, -1);
+        }
+
+        [TestMethod]
+        public void ExtendedEuclidTes7()
+        {
+            ExtendedEuclid algorithm = new ExtendedEuclid();
+            int res = algorithm.GetMultiplicativeInverse(123456789, 12365);
+            Assert.AreEqual(res, 3729);
         }
     }
 }

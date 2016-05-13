@@ -4,7 +4,6 @@ using SecurityLibrary.AES;
 
 namespace SecurityPackageTest
 {
-    //[Ignore]
     [TestClass]
     public class AESTest
     {
@@ -22,7 +21,7 @@ namespace SecurityPackageTest
 
 
         [TestMethod]
-        public void AESTest1()
+        public void AESTestEnc1()
         {
             AES algorithm = new AES();
             string cipher = algorithm.Encrypt(mainPlain, mainKey);
@@ -30,7 +29,7 @@ namespace SecurityPackageTest
         }
 
         [TestMethod]
-        public void AESTest2()
+        public void AESTestDec1()
         {
             AES algorithm = new AES();
             string plain = algorithm.Decrypt(mainCipher, mainKey);
@@ -38,7 +37,7 @@ namespace SecurityPackageTest
         }
 
         [TestMethod]
-        public void AESTest3()
+        public void AESTestEnc2()
         {
             AES algorithm = new AES();
             string cipher = algorithm.Encrypt(mainPlain2, mainKey2);
@@ -46,7 +45,7 @@ namespace SecurityPackageTest
         }
 
         [TestMethod]
-        public void AESTest4()
+        public void AESTestDec2()
         {
             AES algorithm = new AES();
             string plain = algorithm.Decrypt(mainCipher2, mainKey2);
@@ -54,7 +53,7 @@ namespace SecurityPackageTest
         }
 
         [TestMethod]
-        public void AESTest5()
+        public void AESTestEnc3()
         {
             AES algorithm = new AES();
             string cipher = algorithm.Encrypt(mainPlain3, mainKey3);
@@ -62,7 +61,7 @@ namespace SecurityPackageTest
         }
 
         [TestMethod]
-        public void AESTest6()
+        public void AESTestDec3()
         {
             AES algorithm = new AES();
             string plain = algorithm.Decrypt(mainCipher3, mainKey3);

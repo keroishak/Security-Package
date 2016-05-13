@@ -13,7 +13,7 @@ namespace SecurityPackageTest
         string mainKey = "deceptive";
 
         [TestMethod]
-        public void RepVignereTest1()
+        public void RepVignereTestEnc1()
         {
             RepeatingkeyVigenere algorithm = new RepeatingkeyVigenere();
             string cipher = algorithm.Encrypt(mainPlain, mainKey);
@@ -21,7 +21,7 @@ namespace SecurityPackageTest
         }
 
         [TestMethod]
-        public void RepVignereTest2()
+        public void RepVignereTestDec1()
         {
             RepeatingkeyVigenere algorithm = new RepeatingkeyVigenere();
             string plain = algorithm.Decrypt(mainCipherRep, mainKey);
@@ -29,7 +29,7 @@ namespace SecurityPackageTest
         }
 
         [TestMethod]
-        public void RepVignereTest3()
+        public void RepVignereTestAnalysis1()
         {
             RepeatingkeyVigenere algorithm = new RepeatingkeyVigenere();
             string key = algorithm.Analyse(mainPlain, mainCipherRep);
@@ -37,7 +37,7 @@ namespace SecurityPackageTest
         }
 
         [TestMethod]
-        public void AutoVignereTest1()
+        public void AutoVignereTestEnc1()
         {
             AutokeyVigenere algorithm = new AutokeyVigenere();
             string cipher = algorithm.Encrypt(mainPlain, mainKey);
@@ -45,7 +45,7 @@ namespace SecurityPackageTest
         }
 
         [TestMethod]
-        public void AutoVignereTest2()
+        public void AutoVignereTestDec1()
         {
             AutokeyVigenere algorithm = new AutokeyVigenere();
             string plain = algorithm.Decrypt(mainCipherAuto, mainKey);
@@ -53,7 +53,7 @@ namespace SecurityPackageTest
         }
 
         [TestMethod]
-        public void AutoVignereTest3()
+        public void AutoVignereTestAnalysis1()
         {
             AutokeyVigenere algorithm = new AutokeyVigenere();
             string key = algorithm.Analyse(mainPlain, mainCipherAuto);
