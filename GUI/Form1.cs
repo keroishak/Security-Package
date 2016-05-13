@@ -95,5 +95,123 @@ namespace GUI
             string result = EE.GetMultiplicativeInverse(int.Parse(ExtendedNumber.Text), int.Parse(ExtendedBase.Text)).ToString();
             ExtendedResult.Text = result;
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            AutokeyVigenere autokey = new AutokeyVigenere();
+            string result = autokey.Encrypt(AutoPTBox.Text, AutoKeyBox.Text);
+            AutoCTBox.Text = result;
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            AutokeyVigenere autokey = new AutokeyVigenere();
+            string result = autokey.Decrypt(AutoCTBox.Text, AutoKeyBox.Text);
+            AutoPTBox.Text = result;
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            AutokeyVigenere autokey = new AutokeyVigenere();
+            string result = autokey.Analyse(AutoPTBox.Text, AutoCTBox.Text);
+            AutoKeyBox.Text = result;
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            RepeatingkeyVigenere repkey = new RepeatingkeyVigenere();
+            string result = repkey.Encrypt(AutoPTBox.Text, AutoKeyBox.Text);
+            AutoCTBox.Text = result;
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            RepeatingkeyVigenere repkey = new RepeatingkeyVigenere();
+            string result = repkey.Decrypt(AutoCTBox.Text, AutoKeyBox.Text);
+            AutoPTBox.Text = result;
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            RepeatingkeyVigenere repkey = new RepeatingkeyVigenere();
+            string result = repkey.Analyse(AutoPTBox.Text, AutoCTBox.Text);
+            AutoKeyBox.Text = result;
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            Ceaser ceaser = new Ceaser();
+            string result = ceaser.Encrypt(CeaserPTBox.Text, Convert.ToInt32(CeaserKeyBox.Text));
+            CeaserCTBox.Text = result;
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            Ceaser ceaser = new Ceaser();
+            string result = ceaser.Decrypt(CeaserCTBox.Text, Convert.ToInt32(CeaserKeyBox.Text));
+            CeaserPTBox.Text = result;
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            Ceaser ceaser = new Ceaser();
+            int result = ceaser.Analyse(CeaserPTBox.Text, CeaserCTBox.Text);
+            CeaserKeyBox.Text = result.ToString();
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            Columnar columnar = new Columnar();
+            List<int> key = new List<int>();
+            string[] arr = ColumnarKeyBox.Text.Split(' ');
+            for (int i = 0; i < arr.Length; i++)
+            {
+                key.Add(Convert.ToInt32(arr[i]));
+            }
+            string result = columnar.Encrypt(ColumnarPTBox.Text, key);
+            ColumnarCTBox.Text = result;
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            Columnar columnar = new Columnar();
+            List<int> key = new List<int>();
+            string[] arr = ColumnarKeyBox.Text.Split(' ');
+            for (int i = 0; i < arr.Length; i++)
+            {
+                key.Add(Convert.ToInt32(arr[i]));
+            }
+            string result = columnar.Decrypt(ColumnarCTBox.Text, key);
+            ColumnarPTBox.Text = result;
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            Columnar columnar = new Columnar();
+            List<int> key = columnar.Analyse(ColumnarPTBox.Text, ColumnarCTBox.Text);
+            string result = "";
+            for (int i = 0; i < key.Count; i++)
+            {
+                if (i != key.Count - 1)
+                    result += key[i].ToString() + " ";
+                else
+                    result += key[i].ToString();
+            }
+            ColumnarKeyBox.Text = result;
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            PlayFair playfair = new PlayFair();
+            string result = playfair.Encrypt(PlayFairPTBox.Text, PalyFairKeyBox.Text);
+            PlayFairCTBox.Text = result;
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            PlayFair playfair = new PlayFair();
+            string result = playfair.Decrypt(PlayFairCTBox.Text, PalyFairKeyBox.Text);
+            PlayFairPTBox.Text = result;
+        }
     }
 }

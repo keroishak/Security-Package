@@ -66,12 +66,60 @@
             this.label10 = new System.Windows.Forms.Label();
             this.ExtendedBase = new System.Windows.Forms.TextBox();
             this.ExtendedNumber = new System.Windows.Forms.TextBox();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.label17 = new System.Windows.Forms.Label();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
+            this.AutoCTBox = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.AutoKeyBox = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.AutoPTBox = new System.Windows.Forms.TextBox();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
+            this.label19 = new System.Windows.Forms.Label();
+            this.CeaserCTBox = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.CeaserKeyBox = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.CeaserPTBox = new System.Windows.Forms.TextBox();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.button14 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
+            this.button16 = new System.Windows.Forms.Button();
+            this.label18 = new System.Windows.Forms.Label();
+            this.ColumnarCTBox = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.ColumnarKeyBox = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.ColumnarPTBox = new System.Windows.Forms.TextBox();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.button17 = new System.Windows.Forms.Button();
+            this.button18 = new System.Windows.Forms.Button();
+            this.label24 = new System.Windows.Forms.Label();
+            this.PlayFairCTBox = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.PalyFairKeyBox = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.PlayFairPTBox = new System.Windows.Forms.TextBox();
             this.tabController1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            this.tabPage5.SuspendLayout();
+            this.tabPage6.SuspendLayout();
+            this.tabPage7.SuspendLayout();
+            this.tabPage8.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabController1
@@ -80,6 +128,10 @@
             this.tabController1.Controls.Add(this.tabPage2);
             this.tabController1.Controls.Add(this.tabPage3);
             this.tabController1.Controls.Add(this.tabPage4);
+            this.tabController1.Controls.Add(this.tabPage5);
+            this.tabController1.Controls.Add(this.tabPage6);
+            this.tabController1.Controls.Add(this.tabPage7);
+            this.tabController1.Controls.Add(this.tabPage8);
             this.tabController1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabController1.Location = new System.Drawing.Point(0, 0);
             this.tabController1.Name = "tabController1";
@@ -450,6 +502,448 @@
             this.ExtendedNumber.Size = new System.Drawing.Size(100, 20);
             this.ExtendedNumber.TabIndex = 0;
             // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.label17);
+            this.tabPage5.Controls.Add(this.button8);
+            this.tabPage5.Controls.Add(this.button9);
+            this.tabPage5.Controls.Add(this.button10);
+            this.tabPage5.Controls.Add(this.label16);
+            this.tabPage5.Controls.Add(this.button7);
+            this.tabPage5.Controls.Add(this.button6);
+            this.tabPage5.Controls.Add(this.button5);
+            this.tabPage5.Controls.Add(this.label15);
+            this.tabPage5.Controls.Add(this.AutoCTBox);
+            this.tabPage5.Controls.Add(this.label14);
+            this.tabPage5.Controls.Add(this.AutoKeyBox);
+            this.tabPage5.Controls.Add(this.label13);
+            this.tabPage5.Controls.Add(this.AutoPTBox);
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(990, 495);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "KeyVigenere";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(553, 216);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(51, 13);
+            this.label17.TabIndex = 16;
+            this.label17.Text = "Rep Key:";
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(621, 388);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(119, 50);
+            this.button8.TabIndex = 15;
+            this.button8.Text = "Analyse";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(621, 313);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(119, 50);
+            this.button9.TabIndex = 14;
+            this.button9.Text = "Decrypt";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(621, 238);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(119, 50);
+            this.button10.TabIndex = 13;
+            this.button10.Text = "Encrypt";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(46, 216);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(53, 13);
+            this.label16.TabIndex = 12;
+            this.label16.Text = "Auto Key:";
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(114, 388);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(119, 50);
+            this.button7.TabIndex = 11;
+            this.button7.Text = "Analyse";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(114, 313);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(119, 50);
+            this.button6.TabIndex = 10;
+            this.button6.Text = "Decrypt";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(114, 238);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(119, 50);
+            this.button5.TabIndex = 9;
+            this.button5.Text = "Encrypt";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(8, 136);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(61, 13);
+            this.label15.TabIndex = 8;
+            this.label15.Text = "CipherText:";
+            // 
+            // AutoCTBox
+            // 
+            this.AutoCTBox.Location = new System.Drawing.Point(6, 152);
+            this.AutoCTBox.Multiline = true;
+            this.AutoCTBox.Name = "AutoCTBox";
+            this.AutoCTBox.Size = new System.Drawing.Size(974, 33);
+            this.AutoCTBox.TabIndex = 7;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(8, 79);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(28, 13);
+            this.label14.TabIndex = 6;
+            this.label14.Text = "Key:";
+            // 
+            // AutoKeyBox
+            // 
+            this.AutoKeyBox.Location = new System.Drawing.Point(6, 95);
+            this.AutoKeyBox.Multiline = true;
+            this.AutoKeyBox.Name = "AutoKeyBox";
+            this.AutoKeyBox.Size = new System.Drawing.Size(974, 33);
+            this.AutoKeyBox.TabIndex = 5;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(8, 17);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(54, 13);
+            this.label13.TabIndex = 4;
+            this.label13.Text = "PlainText:";
+            // 
+            // AutoPTBox
+            // 
+            this.AutoPTBox.Location = new System.Drawing.Point(6, 33);
+            this.AutoPTBox.Multiline = true;
+            this.AutoPTBox.Name = "AutoPTBox";
+            this.AutoPTBox.Size = new System.Drawing.Size(974, 33);
+            this.AutoPTBox.TabIndex = 3;
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Controls.Add(this.button11);
+            this.tabPage6.Controls.Add(this.button12);
+            this.tabPage6.Controls.Add(this.button13);
+            this.tabPage6.Controls.Add(this.label19);
+            this.tabPage6.Controls.Add(this.CeaserCTBox);
+            this.tabPage6.Controls.Add(this.label20);
+            this.tabPage6.Controls.Add(this.CeaserKeyBox);
+            this.tabPage6.Controls.Add(this.label21);
+            this.tabPage6.Controls.Add(this.CeaserPTBox);
+            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(990, 495);
+            this.tabPage6.TabIndex = 5;
+            this.tabPage6.Text = "Ceaser";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(521, 258);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(119, 50);
+            this.button11.TabIndex = 21;
+            this.button11.Text = "Analyse";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // button12
+            // 
+            this.button12.Location = new System.Drawing.Point(312, 258);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(119, 50);
+            this.button12.TabIndex = 20;
+            this.button12.Text = "Decrypt";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
+            // button13
+            // 
+            this.button13.Location = new System.Drawing.Point(116, 258);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(119, 50);
+            this.button13.TabIndex = 19;
+            this.button13.Text = "Encrypt";
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(10, 156);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(61, 13);
+            this.label19.TabIndex = 18;
+            this.label19.Text = "CipherText:";
+            // 
+            // CeaserCTBox
+            // 
+            this.CeaserCTBox.Location = new System.Drawing.Point(8, 172);
+            this.CeaserCTBox.Multiline = true;
+            this.CeaserCTBox.Name = "CeaserCTBox";
+            this.CeaserCTBox.Size = new System.Drawing.Size(974, 33);
+            this.CeaserCTBox.TabIndex = 17;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(10, 99);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(28, 13);
+            this.label20.TabIndex = 16;
+            this.label20.Text = "Key:";
+            // 
+            // CeaserKeyBox
+            // 
+            this.CeaserKeyBox.Location = new System.Drawing.Point(8, 115);
+            this.CeaserKeyBox.Multiline = true;
+            this.CeaserKeyBox.Name = "CeaserKeyBox";
+            this.CeaserKeyBox.Size = new System.Drawing.Size(974, 33);
+            this.CeaserKeyBox.TabIndex = 15;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(10, 37);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(54, 13);
+            this.label21.TabIndex = 14;
+            this.label21.Text = "PlainText:";
+            // 
+            // CeaserPTBox
+            // 
+            this.CeaserPTBox.Location = new System.Drawing.Point(8, 53);
+            this.CeaserPTBox.Multiline = true;
+            this.CeaserPTBox.Name = "CeaserPTBox";
+            this.CeaserPTBox.Size = new System.Drawing.Size(974, 33);
+            this.CeaserPTBox.TabIndex = 13;
+            // 
+            // tabPage7
+            // 
+            this.tabPage7.Controls.Add(this.button14);
+            this.tabPage7.Controls.Add(this.button15);
+            this.tabPage7.Controls.Add(this.button16);
+            this.tabPage7.Controls.Add(this.label18);
+            this.tabPage7.Controls.Add(this.ColumnarCTBox);
+            this.tabPage7.Controls.Add(this.label22);
+            this.tabPage7.Controls.Add(this.ColumnarKeyBox);
+            this.tabPage7.Controls.Add(this.label23);
+            this.tabPage7.Controls.Add(this.ColumnarPTBox);
+            this.tabPage7.Location = new System.Drawing.Point(4, 22);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage7.Size = new System.Drawing.Size(990, 495);
+            this.tabPage7.TabIndex = 6;
+            this.tabPage7.Text = "Colmunar";
+            this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // button14
+            // 
+            this.button14.Location = new System.Drawing.Point(516, 234);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(119, 50);
+            this.button14.TabIndex = 30;
+            this.button14.Text = "Analyse";
+            this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
+            // 
+            // button15
+            // 
+            this.button15.Location = new System.Drawing.Point(307, 234);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(119, 50);
+            this.button15.TabIndex = 29;
+            this.button15.Text = "Decrypt";
+            this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
+            // 
+            // button16
+            // 
+            this.button16.Location = new System.Drawing.Point(111, 234);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(119, 50);
+            this.button16.TabIndex = 28;
+            this.button16.Text = "Encrypt";
+            this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(5, 132);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(61, 13);
+            this.label18.TabIndex = 27;
+            this.label18.Text = "CipherText:";
+            // 
+            // ColumnarCTBox
+            // 
+            this.ColumnarCTBox.Location = new System.Drawing.Point(3, 148);
+            this.ColumnarCTBox.Multiline = true;
+            this.ColumnarCTBox.Name = "ColumnarCTBox";
+            this.ColumnarCTBox.Size = new System.Drawing.Size(974, 33);
+            this.ColumnarCTBox.TabIndex = 26;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(5, 75);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(28, 13);
+            this.label22.TabIndex = 25;
+            this.label22.Text = "Key:";
+            // 
+            // ColumnarKeyBox
+            // 
+            this.ColumnarKeyBox.Location = new System.Drawing.Point(3, 91);
+            this.ColumnarKeyBox.Multiline = true;
+            this.ColumnarKeyBox.Name = "ColumnarKeyBox";
+            this.ColumnarKeyBox.Size = new System.Drawing.Size(974, 33);
+            this.ColumnarKeyBox.TabIndex = 24;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(5, 13);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(54, 13);
+            this.label23.TabIndex = 23;
+            this.label23.Text = "PlainText:";
+            // 
+            // ColumnarPTBox
+            // 
+            this.ColumnarPTBox.Location = new System.Drawing.Point(3, 29);
+            this.ColumnarPTBox.Multiline = true;
+            this.ColumnarPTBox.Name = "ColumnarPTBox";
+            this.ColumnarPTBox.Size = new System.Drawing.Size(974, 33);
+            this.ColumnarPTBox.TabIndex = 22;
+            // 
+            // tabPage8
+            // 
+            this.tabPage8.Controls.Add(this.button17);
+            this.tabPage8.Controls.Add(this.button18);
+            this.tabPage8.Controls.Add(this.label24);
+            this.tabPage8.Controls.Add(this.PlayFairCTBox);
+            this.tabPage8.Controls.Add(this.label25);
+            this.tabPage8.Controls.Add(this.PalyFairKeyBox);
+            this.tabPage8.Controls.Add(this.label26);
+            this.tabPage8.Controls.Add(this.PlayFairPTBox);
+            this.tabPage8.Location = new System.Drawing.Point(4, 22);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage8.Size = new System.Drawing.Size(990, 495);
+            this.tabPage8.TabIndex = 7;
+            this.tabPage8.Text = "PlayFair";
+            this.tabPage8.UseVisualStyleBackColor = true;
+            // 
+            // button17
+            // 
+            this.button17.Location = new System.Drawing.Point(520, 229);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(119, 50);
+            this.button17.TabIndex = 37;
+            this.button17.Text = "Decrypt";
+            this.button17.UseVisualStyleBackColor = true;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
+            // 
+            // button18
+            // 
+            this.button18.Location = new System.Drawing.Point(114, 229);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(119, 50);
+            this.button18.TabIndex = 36;
+            this.button18.Text = "Encrypt";
+            this.button18.UseVisualStyleBackColor = true;
+            this.button18.Click += new System.EventHandler(this.button18_Click);
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(8, 127);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(61, 13);
+            this.label24.TabIndex = 35;
+            this.label24.Text = "CipherText:";
+            // 
+            // PlayFairCTBox
+            // 
+            this.PlayFairCTBox.Location = new System.Drawing.Point(6, 143);
+            this.PlayFairCTBox.Multiline = true;
+            this.PlayFairCTBox.Name = "PlayFairCTBox";
+            this.PlayFairCTBox.Size = new System.Drawing.Size(974, 33);
+            this.PlayFairCTBox.TabIndex = 34;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(8, 70);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(28, 13);
+            this.label25.TabIndex = 33;
+            this.label25.Text = "Key:";
+            // 
+            // PalyFairKeyBox
+            // 
+            this.PalyFairKeyBox.Location = new System.Drawing.Point(6, 86);
+            this.PalyFairKeyBox.Multiline = true;
+            this.PalyFairKeyBox.Name = "PalyFairKeyBox";
+            this.PalyFairKeyBox.Size = new System.Drawing.Size(974, 33);
+            this.PalyFairKeyBox.TabIndex = 32;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(8, 8);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(54, 13);
+            this.label26.TabIndex = 31;
+            this.label26.Text = "PlainText:";
+            // 
+            // PlayFairPTBox
+            // 
+            this.PlayFairPTBox.Location = new System.Drawing.Point(6, 24);
+            this.PlayFairPTBox.Multiline = true;
+            this.PlayFairPTBox.Name = "PlayFairPTBox";
+            this.PlayFairPTBox.Size = new System.Drawing.Size(974, 33);
+            this.PlayFairPTBox.TabIndex = 30;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -469,6 +963,14 @@
             this.tabPage3.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
+            this.tabPage6.ResumeLayout(false);
+            this.tabPage6.PerformLayout();
+            this.tabPage7.ResumeLayout(false);
+            this.tabPage7.PerformLayout();
+            this.tabPage8.ResumeLayout(false);
+            this.tabPage8.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -513,6 +1015,50 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox ExtendedBase;
         private System.Windows.Forms.TextBox ExtendedNumber;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox AutoCTBox;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox AutoKeyBox;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox AutoPTBox;
+        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox CeaserCTBox;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox CeaserKeyBox;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.TextBox CeaserPTBox;
+        private System.Windows.Forms.TabPage tabPage7;
+        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox ColumnarCTBox;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox ColumnarKeyBox;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.TextBox ColumnarPTBox;
+        private System.Windows.Forms.TabPage tabPage8;
+        private System.Windows.Forms.Button button17;
+        private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TextBox PlayFairCTBox;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.TextBox PalyFairKeyBox;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.TextBox PlayFairPTBox;
     }
 }
 
