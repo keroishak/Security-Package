@@ -11,10 +11,10 @@ namespace SecurityLibrary
         private char[,] matrix;
         private Dictionary<char, int> myDictionary;
         private char[] Letters = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
-        
+
         public PlayFair()
         {
-            matrix = new char[5,5];
+            matrix = new char[5, 5];
             myDictionary = new Dictionary<char, int>();
         }
 
@@ -145,7 +145,18 @@ namespace SecurityLibrary
                     res += matrix[secondrow, firstcol];
                 }
             }
-
+            char[] tmp = res.ToArray();
+            res="";
+            for (int i = 0; i < tmp.Length - 2; ++i)
+                if (tmp[i] == tmp[i + 2] && tmp[i + 1] == 'x'&&i%2==0)
+                {
+                    tmp[i + 1] = '0';
+                }
+            for (int i = 0; i < tmp.Length; ++i)
+                if (tmp[i] != '0')
+                    res += tmp[i];
+                if (res[res.Length - 1] == 'x')
+                    return res.Substring(0, res.Length - 1).ToLower();
             return res.ToLower();
         }
 
@@ -153,7 +164,7 @@ namespace SecurityLibrary
         {
             for (int i = 0; i < 26; i++)
             {
-                myDictionary.Add(Letters[i],0);
+                myDictionary.Add(Letters[i], 0);
             }
             key = RemoveDuplicatedinKey(key);
             int ind = 0;
@@ -196,24 +207,24 @@ namespace SecurityLibrary
                             }
                         }
                     }
-                    
+
                 }
-                
+
             }
             string first, second;
             int firstrow = 0, secondrow = 0;
             int firstcol = 0, secondcol = 0;
             string res = "";
 
-            for (int i = 0; i < plainText.Length; i+=2)
+            for (int i = 0; i < plainText.Length; i += 2)
             {
-                if (plainText[i] == plainText[i+1])
+                if (plainText[i] == plainText[i + 1])
                 {
-                    first = new string(plainText.Take(i+1).ToArray());
-                    second = new string(plainText.Skip(i+1).ToArray());
+                    first = new string(plainText.Take(i + 1).ToArray());
+                    second = new string(plainText.Skip(i + 1).ToArray());
                     plainText = first + 'x' + second;
                 }
-                if (plainText.Length % 2 != 0 && plainText.Length -1 - i == 2)
+                if (plainText.Length % 2 != 0 && plainText.Length - 1 - i == 2)
                 {
                     plainText += 'x';
                 }
@@ -235,12 +246,12 @@ namespace SecurityLibrary
                 }
                 if (firstrow == secondrow)
                 {
-                    res += matrix[firstrow, (firstcol + 1)%5];
+                    res += matrix[firstrow, (firstcol + 1) % 5];
                     res += matrix[secondrow, (secondcol + 1) % 5];
                 }
                 else if (firstcol == secondcol)
                 {
-                    res += matrix[(firstrow + 1)%5, firstcol];
+                    res += matrix[(firstrow + 1) % 5, firstcol];
                     res += matrix[(secondrow + 1) % 5, secondcol];
                 }
                 else

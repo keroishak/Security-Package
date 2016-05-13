@@ -39,7 +39,7 @@ namespace SecurityPackageTest
             Assert.IsTrue(plain.Equals(mainPlain, StringComparison.InvariantCultureIgnoreCase));
         }
 
-     
+
         [TestMethod]
         public void PlayfairTestEnc2()
         {
@@ -109,6 +109,6 @@ namespace SecurityPackageTest
             Assert.IsTrue(count * 100 / largePlain.Length > 50);*/
         }
 
-       
+
     }
-}                                                   
+}

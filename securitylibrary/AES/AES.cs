@@ -247,7 +247,6 @@ namespace SecurityLibrary.AES
             AddRoundKey(Keys[0]);
             return ToString();
         }
-
         public override string Encrypt(string plainText, string key)
         {
             state = ToByteArray(plainText);
