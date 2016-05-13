@@ -49,6 +49,7 @@ namespace SecurityLibrary
         {
             //throw new NotImplementedException();
             plainText = plainText.ToUpper();
+            cipherText = cipherText.ToUpper();
             int key = cipherText[0] - plainText[0];
             if (key < 0)
             {

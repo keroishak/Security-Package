@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics.Eventing;
 using System.Linq;
@@ -39,7 +39,7 @@ namespace SecurityLibrary
                 }
                 PTlist.Add(s);
             }
-            
+
             return PTlist;
         }
 
@@ -54,7 +54,7 @@ namespace SecurityLibrary
             int rem = (key - (ct.Length % key)) % key;
             for (int i = 0; i < rem; i++)
             {
-                input += 'X';
+                input = input.Insert(input.Length - i * columns, "X");
             }
             input = input.ToUpper();
             char[,] PT = new char[rows, columns];
@@ -91,7 +91,7 @@ namespace SecurityLibrary
             }
             return false;
         }
-        
+
         public List<int> Analyse(string plainText, string cipherText)
         {
             bool hasx = true;
@@ -116,14 +116,16 @@ namespace SecurityLibrary
             List<string> CTlist = new List<string>();
             List<int> keys = new List<int>();
             bool start = false;
+            int keyLength = 0;
             for (int key = 2; key < plainText.Length; key++)
             {
+                keyLength = key;
                 PTlist = PlaintoList(plainText, key);
                 CTlist = ciphertoList(cipherText, key);
                 keys = new List<int>();
 
                 bool compelete = true;
-                if (firstisfound(PTlist,CTlist))
+                if (firstisfound(PTlist, CTlist))
                 {
                     start = true;
                     for (int i = 0; i < PTlist.Count; i++)
@@ -133,7 +135,7 @@ namespace SecurityLibrary
                         {
                             if (CTlist[j] == PTlist[i])
                             {
-                                keys.Add(j+1);
+                                keys.Add(j + 1);
                                 found = true;
                             }
                         }
@@ -149,8 +151,14 @@ namespace SecurityLibrary
                     break;
                 }
             }
+            if (keys.Count == 0)
+                for (int i = 0; i < keyLength; i++)
+                {
+                    keys.Add(0);
+                }
+
             return keys;
-            
+
         }
 
         public string Decrypt(string cipherText, List<int> key)
@@ -161,9 +169,10 @@ namespace SecurityLibrary
             string input = cipherText;
             for (int i = 0; i < rem; i++)
             {
-                input += 'X';
+                //input += 'X';
+                input = input.Insert(input.Length - i * rows, "X");
             }
-            string [] vertical = new string[columns];
+            string[] vertical = new string[columns];
             int ind = 0;
             int count = 0;
             for (int i = 0; i < input.Length; i++)
@@ -178,14 +187,22 @@ namespace SecurityLibrary
             }
 
             string PT = "";
+            char[,] arr = new char[rows, columns];
+            for (int j = 0; j < columns; j++)
+            {
+                for (int i = 0; i < rows; i++)
+                {
+                    arr[i, j] = vertical[key[j] - 1][i];
+                }
+            }
             for (int i = 0; i < rows; i++)
             {
                 for (int j = 0; j < columns; j++)
                 {
-                    PT += vertical[key[j] - 1][i];
+                    PT += arr[i, j];
                 }
             }
-            if(rem == 0 && PT[PT.Length-1] == 'X')
+            if (rem > 0 && PT[PT.Length - 1] == 'X')
                 for (int i = PT.Length - 1; i > -1 && PT[PT.Length - 1] == 'X'; i--)
                 {
                     if (PT[i] == 'X')
@@ -205,7 +222,7 @@ namespace SecurityLibrary
                 input += 'x';
             }
             input = input.ToUpper();
-            char[,] PT = new char[rows,columns];
+            char[,] PT = new char[rows, columns];
             int ind = 0;
             for (int i = 0; i < rows; i++)
             {
@@ -214,12 +231,12 @@ namespace SecurityLibrary
                     PT[i, j] = input[ind++];
                 }
             }
-            string []results = new string[columns];
+            string[] results = new string[columns];
             for (int i = 0; i < rows; i++)
             {
                 for (int j = 0; j < columns; j++)
                 {
-                    results[key[j]-1] += PT[i,j];
+                    results[key[j] - 1] += PT[i, j];
                 }
             }
             string res = "";
