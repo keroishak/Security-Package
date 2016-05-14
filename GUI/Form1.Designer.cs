@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabController1 = new System.Windows.Forms.TabControl();
+            this.RailFence = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
             this.MD5_Output = new System.Windows.Forms.TextBox();
@@ -110,7 +110,37 @@
             this.PalyFairKeyBox = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
             this.PlayFairPTBox = new System.Windows.Forms.TextBox();
-            this.tabController1.SuspendLayout();
+            this.tabPage9 = new System.Windows.Forms.TabPage();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.PlainText = new System.Windows.Forms.RichTextBox();
+            this.CipherText = new System.Windows.Forms.RichTextBox();
+            this.RailEncrypt = new System.Windows.Forms.Button();
+            this.RailDecrypt = new System.Windows.Forms.Button();
+            this.RailAnalays = new System.Windows.Forms.Button();
+            this.RailKey = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.tabPage10 = new System.Windows.Forms.TabPage();
+            this.HillPlain = new System.Windows.Forms.RichTextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.HillCipher = new System.Windows.Forms.RichTextBox();
+            this.HillEncrypt = new System.Windows.Forms.Button();
+            this.HillDecrypt = new System.Windows.Forms.Button();
+            this.HillAnalays = new System.Windows.Forms.Button();
+            this.l = new System.Windows.Forms.Label();
+            this.HILLKey = new System.Windows.Forms.TextBox();
+            this.tabPage11 = new System.Windows.Forms.TabPage();
+            this.label32 = new System.Windows.Forms.Label();
+            this.MonoCipher = new System.Windows.Forms.RichTextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.MonoPlain = new System.Windows.Forms.RichTextBox();
+            this.MonoAnalays = new System.Windows.Forms.Button();
+            this.MOnoDecrypt = new System.Windows.Forms.Button();
+            this.MonoEncrypt = new System.Windows.Forms.Button();
+            this.MonoKey = new System.Windows.Forms.RichTextBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.RailFence.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -120,24 +150,32 @@
             this.tabPage6.SuspendLayout();
             this.tabPage7.SuspendLayout();
             this.tabPage8.SuspendLayout();
+            this.tabPage9.SuspendLayout();
+            this.tabPage10.SuspendLayout();
+            this.tabPage11.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabController1
+            // RailFence
             // 
-            this.tabController1.Controls.Add(this.tabPage1);
-            this.tabController1.Controls.Add(this.tabPage2);
-            this.tabController1.Controls.Add(this.tabPage3);
-            this.tabController1.Controls.Add(this.tabPage4);
-            this.tabController1.Controls.Add(this.tabPage5);
-            this.tabController1.Controls.Add(this.tabPage6);
-            this.tabController1.Controls.Add(this.tabPage7);
-            this.tabController1.Controls.Add(this.tabPage8);
-            this.tabController1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabController1.Location = new System.Drawing.Point(0, 0);
-            this.tabController1.Name = "tabController1";
-            this.tabController1.SelectedIndex = 0;
-            this.tabController1.Size = new System.Drawing.Size(998, 521);
-            this.tabController1.TabIndex = 0;
+            this.RailFence.AccessibleName = "";
+            this.RailFence.Controls.Add(this.tabPage1);
+            this.RailFence.Controls.Add(this.tabPage2);
+            this.RailFence.Controls.Add(this.tabPage3);
+            this.RailFence.Controls.Add(this.tabPage4);
+            this.RailFence.Controls.Add(this.tabPage5);
+            this.RailFence.Controls.Add(this.tabPage6);
+            this.RailFence.Controls.Add(this.tabPage7);
+            this.RailFence.Controls.Add(this.tabPage8);
+            this.RailFence.Controls.Add(this.tabPage9);
+            this.RailFence.Controls.Add(this.tabPage10);
+            this.RailFence.Controls.Add(this.tabPage11);
+            this.RailFence.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.RailFence.Location = new System.Drawing.Point(0, 0);
+            this.RailFence.Name = "RailFence";
+            this.RailFence.SelectedIndex = 0;
+            this.RailFence.Size = new System.Drawing.Size(998, 521);
+            this.RailFence.TabIndex = 0;
+            this.RailFence.Tag = "";
             // 
             // tabPage1
             // 
@@ -944,15 +982,313 @@
             this.PlayFairPTBox.Size = new System.Drawing.Size(974, 33);
             this.PlayFairPTBox.TabIndex = 30;
             // 
+            // tabPage9
+            // 
+            this.tabPage9.Controls.Add(this.label29);
+            this.tabPage9.Controls.Add(this.RailKey);
+            this.tabPage9.Controls.Add(this.RailAnalays);
+            this.tabPage9.Controls.Add(this.RailDecrypt);
+            this.tabPage9.Controls.Add(this.RailEncrypt);
+            this.tabPage9.Controls.Add(this.CipherText);
+            this.tabPage9.Controls.Add(this.PlainText);
+            this.tabPage9.Controls.Add(this.label28);
+            this.tabPage9.Controls.Add(this.label27);
+            this.tabPage9.Location = new System.Drawing.Point(4, 22);
+            this.tabPage9.Name = "tabPage9";
+            this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage9.Size = new System.Drawing.Size(990, 495);
+            this.tabPage9.TabIndex = 8;
+            this.tabPage9.Text = "RailFence";
+            this.tabPage9.UseVisualStyleBackColor = true;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(8, 19);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(51, 13);
+            this.label27.TabIndex = 0;
+            this.label27.Text = "PlainText";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(8, 106);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(58, 13);
+            this.label28.TabIndex = 1;
+            this.label28.Text = "CipherText";
+            // 
+            // PlainText
+            // 
+            this.PlainText.Location = new System.Drawing.Point(11, 36);
+            this.PlainText.Name = "PlainText";
+            this.PlainText.Size = new System.Drawing.Size(397, 50);
+            this.PlainText.TabIndex = 2;
+            this.PlainText.Text = "";
+            // 
+            // CipherText
+            // 
+            this.CipherText.Location = new System.Drawing.Point(11, 133);
+            this.CipherText.Name = "CipherText";
+            this.CipherText.Size = new System.Drawing.Size(397, 50);
+            this.CipherText.TabIndex = 3;
+            this.CipherText.Text = "";
+            // 
+            // RailEncrypt
+            // 
+            this.RailEncrypt.Location = new System.Drawing.Point(11, 246);
+            this.RailEncrypt.Name = "RailEncrypt";
+            this.RailEncrypt.Size = new System.Drawing.Size(75, 23);
+            this.RailEncrypt.TabIndex = 4;
+            this.RailEncrypt.Text = "Encrypt";
+            this.RailEncrypt.UseVisualStyleBackColor = true;
+            this.RailEncrypt.Click += new System.EventHandler(this.RailEncrypt_Click);
+            // 
+            // RailDecrypt
+            // 
+            this.RailDecrypt.Location = new System.Drawing.Point(110, 246);
+            this.RailDecrypt.Name = "RailDecrypt";
+            this.RailDecrypt.Size = new System.Drawing.Size(75, 23);
+            this.RailDecrypt.TabIndex = 5;
+            this.RailDecrypt.Text = "Decrypt";
+            this.RailDecrypt.UseVisualStyleBackColor = true;
+            this.RailDecrypt.Click += new System.EventHandler(this.RailDecrypt_Click);
+            // 
+            // RailAnalays
+            // 
+            this.RailAnalays.Location = new System.Drawing.Point(206, 246);
+            this.RailAnalays.Name = "RailAnalays";
+            this.RailAnalays.Size = new System.Drawing.Size(75, 23);
+            this.RailAnalays.TabIndex = 6;
+            this.RailAnalays.Text = "Analays";
+            this.RailAnalays.UseVisualStyleBackColor = true;
+            this.RailAnalays.Click += new System.EventHandler(this.RailAnalays_Click);
+            // 
+            // RailKey
+            // 
+            this.RailKey.Location = new System.Drawing.Point(343, 249);
+            this.RailKey.Name = "RailKey";
+            this.RailKey.Size = new System.Drawing.Size(76, 20);
+            this.RailKey.TabIndex = 7;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(350, 219);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(25, 13);
+            this.label29.TabIndex = 8;
+            this.label29.Text = "Key";
+            // 
+            // tabPage10
+            // 
+            this.tabPage10.Controls.Add(this.HILLKey);
+            this.tabPage10.Controls.Add(this.l);
+            this.tabPage10.Controls.Add(this.HillAnalays);
+            this.tabPage10.Controls.Add(this.HillDecrypt);
+            this.tabPage10.Controls.Add(this.HillEncrypt);
+            this.tabPage10.Controls.Add(this.label31);
+            this.tabPage10.Controls.Add(this.HillCipher);
+            this.tabPage10.Controls.Add(this.label30);
+            this.tabPage10.Controls.Add(this.HillPlain);
+            this.tabPage10.Location = new System.Drawing.Point(4, 22);
+            this.tabPage10.Name = "tabPage10";
+            this.tabPage10.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage10.Size = new System.Drawing.Size(990, 495);
+            this.tabPage10.TabIndex = 9;
+            this.tabPage10.Text = "HillCipher";
+            this.tabPage10.UseVisualStyleBackColor = true;
+            // 
+            // HillPlain
+            // 
+            this.HillPlain.Location = new System.Drawing.Point(9, 44);
+            this.HillPlain.Name = "HillPlain";
+            this.HillPlain.Size = new System.Drawing.Size(560, 96);
+            this.HillPlain.TabIndex = 0;
+            this.HillPlain.Text = "";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(9, 25);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(51, 13);
+            this.label30.TabIndex = 1;
+            this.label30.Text = "PlainText";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(12, 161);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(58, 13);
+            this.label31.TabIndex = 3;
+            this.label31.Text = "CipherText";
+            // 
+            // HillCipher
+            // 
+            this.HillCipher.Location = new System.Drawing.Point(12, 180);
+            this.HillCipher.Name = "HillCipher";
+            this.HillCipher.Size = new System.Drawing.Size(560, 96);
+            this.HillCipher.TabIndex = 2;
+            this.HillCipher.Text = "";
+            // 
+            // HillEncrypt
+            // 
+            this.HillEncrypt.Location = new System.Drawing.Point(15, 339);
+            this.HillEncrypt.Name = "HillEncrypt";
+            this.HillEncrypt.Size = new System.Drawing.Size(75, 23);
+            this.HillEncrypt.TabIndex = 4;
+            this.HillEncrypt.Text = "Encrypt";
+            this.HillEncrypt.UseVisualStyleBackColor = true;
+            this.HillEncrypt.Click += new System.EventHandler(this.HillEncrypt_Click);
+            // 
+            // HillDecrypt
+            // 
+            this.HillDecrypt.Location = new System.Drawing.Point(124, 339);
+            this.HillDecrypt.Name = "HillDecrypt";
+            this.HillDecrypt.Size = new System.Drawing.Size(75, 23);
+            this.HillDecrypt.TabIndex = 5;
+            this.HillDecrypt.Text = "Decrypt";
+            this.HillDecrypt.UseVisualStyleBackColor = true;
+            this.HillDecrypt.Click += new System.EventHandler(this.HillDecrypt_Click);
+            // 
+            // HillAnalays
+            // 
+            this.HillAnalays.Location = new System.Drawing.Point(244, 339);
+            this.HillAnalays.Name = "HillAnalays";
+            this.HillAnalays.Size = new System.Drawing.Size(75, 23);
+            this.HillAnalays.TabIndex = 6;
+            this.HillAnalays.Text = "Analays";
+            this.HillAnalays.UseVisualStyleBackColor = true;
+            this.HillAnalays.Click += new System.EventHandler(this.HillAnalays_Click);
+            // 
+            // l
+            // 
+            this.l.AutoSize = true;
+            this.l.Location = new System.Drawing.Point(388, 311);
+            this.l.Name = "l";
+            this.l.Size = new System.Drawing.Size(48, 13);
+            this.l.TabIndex = 7;
+            this.l.Text = "HILLKey";
+            // 
+            // HILLKey
+            // 
+            this.HILLKey.Location = new System.Drawing.Point(391, 341);
+            this.HILLKey.Name = "HILLKey";
+            this.HILLKey.Size = new System.Drawing.Size(100, 20);
+            this.HILLKey.TabIndex = 8;
+            // 
+            // tabPage11
+            // 
+            this.tabPage11.Controls.Add(this.label34);
+            this.tabPage11.Controls.Add(this.MonoKey);
+            this.tabPage11.Controls.Add(this.MonoAnalays);
+            this.tabPage11.Controls.Add(this.MOnoDecrypt);
+            this.tabPage11.Controls.Add(this.MonoEncrypt);
+            this.tabPage11.Controls.Add(this.label32);
+            this.tabPage11.Controls.Add(this.MonoCipher);
+            this.tabPage11.Controls.Add(this.label33);
+            this.tabPage11.Controls.Add(this.MonoPlain);
+            this.tabPage11.Location = new System.Drawing.Point(4, 22);
+            this.tabPage11.Name = "tabPage11";
+            this.tabPage11.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage11.Size = new System.Drawing.Size(990, 495);
+            this.tabPage11.TabIndex = 10;
+            this.tabPage11.Text = "Mono";
+            this.tabPage11.UseVisualStyleBackColor = true;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(30, 161);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(58, 13);
+            this.label32.TabIndex = 7;
+            this.label32.Text = "CipherText";
+            // 
+            // MonoCipher
+            // 
+            this.MonoCipher.Location = new System.Drawing.Point(30, 180);
+            this.MonoCipher.Name = "MonoCipher";
+            this.MonoCipher.Size = new System.Drawing.Size(560, 96);
+            this.MonoCipher.TabIndex = 6;
+            this.MonoCipher.Text = "";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(27, 25);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(51, 13);
+            this.label33.TabIndex = 5;
+            this.label33.Text = "PlainText";
+            // 
+            // MonoPlain
+            // 
+            this.MonoPlain.Location = new System.Drawing.Point(27, 44);
+            this.MonoPlain.Name = "MonoPlain";
+            this.MonoPlain.Size = new System.Drawing.Size(560, 96);
+            this.MonoPlain.TabIndex = 4;
+            this.MonoPlain.Text = "";
+            // 
+            // MonoAnalays
+            // 
+            this.MonoAnalays.Location = new System.Drawing.Point(248, 337);
+            this.MonoAnalays.Name = "MonoAnalays";
+            this.MonoAnalays.Size = new System.Drawing.Size(75, 23);
+            this.MonoAnalays.TabIndex = 10;
+            this.MonoAnalays.Text = "Analays";
+            this.MonoAnalays.UseVisualStyleBackColor = true;
+            this.MonoAnalays.Click += new System.EventHandler(this.MonoAnalays_Click);
+            // 
+            // MOnoDecrypt
+            // 
+            this.MOnoDecrypt.Location = new System.Drawing.Point(144, 337);
+            this.MOnoDecrypt.Name = "MOnoDecrypt";
+            this.MOnoDecrypt.Size = new System.Drawing.Size(75, 23);
+            this.MOnoDecrypt.TabIndex = 9;
+            this.MOnoDecrypt.Text = "Decrypt";
+            this.MOnoDecrypt.UseVisualStyleBackColor = true;
+            this.MOnoDecrypt.Click += new System.EventHandler(this.MOnoDecrypt_Click);
+            // 
+            // MonoEncrypt
+            // 
+            this.MonoEncrypt.Location = new System.Drawing.Point(35, 337);
+            this.MonoEncrypt.Name = "MonoEncrypt";
+            this.MonoEncrypt.Size = new System.Drawing.Size(75, 23);
+            this.MonoEncrypt.TabIndex = 8;
+            this.MonoEncrypt.Text = "Encrypt";
+            this.MonoEncrypt.UseVisualStyleBackColor = true;
+            this.MonoEncrypt.Click += new System.EventHandler(this.MonoEncrypt_Click);
+            // 
+            // MonoKey
+            // 
+            this.MonoKey.Location = new System.Drawing.Point(342, 337);
+            this.MonoKey.Name = "MonoKey";
+            this.MonoKey.Size = new System.Drawing.Size(245, 23);
+            this.MonoKey.TabIndex = 11;
+            this.MonoKey.Text = "";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(339, 311);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(25, 13);
+            this.label34.TabIndex = 12;
+            this.label34.Text = "Key";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(998, 521);
-            this.Controls.Add(this.tabController1);
+            this.Controls.Add(this.RailFence);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.tabController1.ResumeLayout(false);
+            this.RailFence.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -971,13 +1307,19 @@
             this.tabPage7.PerformLayout();
             this.tabPage8.ResumeLayout(false);
             this.tabPage8.PerformLayout();
+            this.tabPage9.ResumeLayout(false);
+            this.tabPage9.PerformLayout();
+            this.tabPage10.ResumeLayout(false);
+            this.tabPage10.PerformLayout();
+            this.tabPage11.ResumeLayout(false);
+            this.tabPage11.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabController1;
+        private System.Windows.Forms.TabControl RailFence;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button button1;
@@ -1059,6 +1401,36 @@
         private System.Windows.Forms.TextBox PalyFairKeyBox;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.TextBox PlayFairPTBox;
+        private System.Windows.Forms.TabPage tabPage9;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.TextBox RailKey;
+        private System.Windows.Forms.Button RailAnalays;
+        private System.Windows.Forms.Button RailDecrypt;
+        private System.Windows.Forms.Button RailEncrypt;
+        private System.Windows.Forms.RichTextBox CipherText;
+        private System.Windows.Forms.RichTextBox PlainText;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.TabPage tabPage10;
+        private System.Windows.Forms.TextBox HILLKey;
+        private System.Windows.Forms.Label l;
+        private System.Windows.Forms.Button HillAnalays;
+        private System.Windows.Forms.Button HillDecrypt;
+        private System.Windows.Forms.Button HillEncrypt;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.RichTextBox HillCipher;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.RichTextBox HillPlain;
+        private System.Windows.Forms.TabPage tabPage11;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.RichTextBox MonoKey;
+        private System.Windows.Forms.Button MonoAnalays;
+        private System.Windows.Forms.Button MOnoDecrypt;
+        private System.Windows.Forms.Button MonoEncrypt;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.RichTextBox MonoCipher;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.RichTextBox MonoPlain;
     }
 }
 

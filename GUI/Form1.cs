@@ -50,7 +50,7 @@ namespace GUI
                 RSA rsa = new RSA();
                 var chars = RSA_Input.Text.Split();
                 string msg = "";
-                foreach(string c in chars)
+                foreach (string c in chars)
                 {
                     var dbytes = rsa.Decrypt(int.Parse(RSA_P.Text), int.Parse(RSA_Q.Text), c,
                     int.Parse(RSA_E.Text));
@@ -91,7 +91,7 @@ namespace GUI
 
         private void button4_Click(object sender, EventArgs e)
         {
-            ExtendedEuclid EE=new ExtendedEuclid();
+            ExtendedEuclid EE = new ExtendedEuclid();
             string result = EE.GetMultiplicativeInverse(int.Parse(ExtendedNumber.Text), int.Parse(ExtendedBase.Text)).ToString();
             ExtendedResult.Text = result;
         }
@@ -213,5 +213,109 @@ namespace GUI
             string result = playfair.Decrypt(PlayFairCTBox.Text, PalyFairKeyBox.Text);
             PlayFairPTBox.Text = result;
         }
+
+        private void RailEncrypt_Click(object sender, EventArgs e)
+        {
+
+            RailFence railfence = new RailFence();
+
+            string res = "";
+            if (RailKey.Text != null)
+            {
+                res = railfence.Encrypt(PlainText.Text, int.Parse(RailKey.Text));
+            }
+            else
+            {
+                MessageBox.Show("enter key value");
+            }
+
+            CipherText.Text = res;
+
+        }
+
+        private void RailDecrypt_Click(object sender, EventArgs e)
+        {
+
+            RailFence railfence = new RailFence();
+
+            string res = "";
+            if (RailKey.Text != null)
+            {
+                res = railfence.Decrypt(CipherText.Text, int.Parse(RailKey.Text));
+            }
+            else
+            {
+                MessageBox.Show("enter key value");
+            }
+
+            PlainText.Text = res;
+        }
+
+        private void RailAnalays_Click(object sender, EventArgs e)
+        {
+            RailFence railfence = new RailFence();
+
+            string res = "";
+
+            int key = railfence.Analyse(PlainText.Text, CipherText.Text);
+
+            RailKey.Text = key.ToString();
+        }
+
+        private void HillEncrypt_Click(object sender, EventArgs e)
+        {
+            HillCipher hillcipher = new HillCipher();
+
+            string res = hillcipher.Encrypt(HillPlain.Text, HILLKey.Text);
+
+            HillCipher.Text = res;
+
+        }
+
+        private void HillDecrypt_Click(object sender, EventArgs e)
+        {
+            HillCipher hillcipher = new HillCipher();
+
+            string res = hillcipher.Decrypt(HillCipher.Text, HILLKey.Text);
+
+            HillPlain.Text = res;
+        }
+
+        private void HillAnalays_Click(object sender, EventArgs e)
+        {
+            HillCipher hillcipher = new HillCipher();
+
+            string res = hillcipher.Analyse(HillPlain.Text, HillCipher.Text);
+
+            HILLKey.Text = res;
+        }
+
+        private void MonoEncrypt_Click(object sender, EventArgs e)
+        {
+            Monoalphabetic mono = new Monoalphabetic();
+
+            string res = mono.Encrypt(MonoPlain.Text, MonoKey.Text);
+
+            MonoCipher.Text = res;
+        }
+
+        private void MOnoDecrypt_Click(object sender, EventArgs e)
+        {
+            Monoalphabetic mono = new Monoalphabetic();
+
+            string res = mono.Decrypt(MonoCipher.Text, MonoKey.Text);
+
+            MonoPlain.Text = res;
+        }
+
+        private void MonoAnalays_Click(object sender, EventArgs e)
+        {
+            Monoalphabetic mono = new Monoalphabetic();
+
+            string res = mono.Analyse(MonoPlain.Text, MonoCipher.Text);
+
+            MonoKey.Text = res;
+        }
+
     }
 }
