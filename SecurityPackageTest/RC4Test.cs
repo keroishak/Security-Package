@@ -42,5 +42,21 @@ namespace SecurityPackageTest
             string cipher = algorithm.Encrypt("0xcfed4475", "0x74657374");
             Assert.IsTrue(cipher.Equals("0x61626364", StringComparison.InvariantCultureIgnoreCase));
         }
+
+        [TestMethod]
+        public void RC4TestNewEnc()
+        {
+            RC4 algorithm = new RC4();
+            string cipher = algorithm.Encrypt("aaaa", "test");
+            Assert.IsTrue(cipher.Equals("ÏîFp"));
+        }
+
+        [TestMethod]
+        public void RC4TestNewDec()
+        {
+            RC4 algorithm = new RC4();
+            string cipher = algorithm.Decrypt("ÏîFp", "test");
+            Assert.IsTrue(cipher.Equals("aaaa"));
+        }
     }
 }

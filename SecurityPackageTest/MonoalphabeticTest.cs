@@ -10,7 +10,7 @@ namespace SecurityPackageTest
     [TestClass]
     public class MonoalphabeticTest
     {
-        string mainPlain =  "meetmeafterthetogaparty";
+        string mainPlain = "meetmeafterthetogaparty";
         string mainCipher = "phhwphdiwhuwkhwrjdsduwb".ToUpper();
         string mainKey = "defghijklmnopqrstuvwxyzabc";
 
@@ -21,6 +21,10 @@ namespace SecurityPackageTest
 
         string mainPlain2 = "hellosecuritymonoalphabetic";
         string mainCipher2 = "ukzzcokynlxfaqcmciztuiskfxy".ToUpper();
+
+        string newPlain = "ENGLISHASTRONOMERWILLIAMLASSELLDISCOVEREDTRITON".ToLower();
+        string newCipher = "EGSDAMTUMOLHGHFELWADDAUFDUMMEDDVAMIHQELEVOLAOHG".ToUpper();
+        string newKey = "UNIVERSTABCDFGHJKLMOPQWXYZ".ToLower();
 
         [TestMethod]
         public void MonoTestEnc1()
@@ -140,6 +144,36 @@ namespace SecurityPackageTest
                  .Count(i => largePlain[i] == plain[i]);
            
             Assert.IsTrue(count * 100 / largePlain.Length > 70);
+        }
+
+        [TestMethod]
+        public void MonoTestNewEnc()
+        {
+            Monoalphabetic algorithm = new Monoalphabetic();
+            string cipher = algorithm.Encrypt(newPlain, newKey);
+            Assert.IsTrue(cipher.Equals(newCipher, StringComparison.InvariantCultureIgnoreCase));
+        }
+
+        [TestMethod]
+        public void MonoTestNewDec()
+        {
+            Monoalphabetic algorithm = new Monoalphabetic();
+            string plain = algorithm.Decrypt(newCipher, newKey);
+            Assert.IsTrue(plain.Equals(newPlain, StringComparison.InvariantCultureIgnoreCase));
+        }
+
+        [TestMethod]
+        public void MonoTestNewAnalysisNaive()
+        {
+            Regex regex = new Regex("u.ive.sta.{2}dfgh.{2}lmo.qw.{3}");
+
+            Monoalphabetic algorithm = new Monoalphabetic();
+            string key = algorithm.Analyse(newPlain, newCipher);
+            List<char> keyChar = new List<char>(key);
+            Assert.AreEqual(key.Length, 26);
+            Assert.AreEqual(keyChar.Distinct().Count(), 26);
+
+            Assert.IsTrue(regex.Match(key).Success);
         }
     }
 }

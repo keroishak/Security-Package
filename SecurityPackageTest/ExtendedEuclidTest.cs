@@ -56,11 +56,19 @@ namespace SecurityPackageTest
         }
 
         [TestMethod]
-        public void ExtendedEuclidTes7()
+        public void ExtendedEuclidTest7()
         {
             ExtendedEuclid algorithm = new ExtendedEuclid();
             int res = algorithm.GetMultiplicativeInverse(123456789, 12365);
             Assert.AreEqual(res, 3729);
+        }
+
+        [TestMethod]
+        public void ExtendedEuclidNewTest()
+        {
+            ExtendedEuclid algorithm = new ExtendedEuclid();
+            int res = algorithm.GetMultiplicativeInverse(13245687, 135469);
+            Assert.AreEqual(res, 38164);
         }
     }
 }

@@ -11,7 +11,175 @@ namespace SecurityLibrary
     /// </summary>
     public class HillCipher : ICryptographicTechnique<string, string>, ICryptographicTechnique<List<int>, List<int>>
     {
-        //analsys...
+        ////analsys...
+        //public List<int> Analyse(List<int> plainText, List<int> cipherText)
+        //{
+
+        //    string _plainText = convertListTOstring(plainText);
+        //    string _CipherTxt = convertListTOstring(cipherText);
+
+        //    string res = Analyse(_plainText, _CipherTxt);
+
+        //    List<int> l = convertstringTOlist(res);
+
+        //    return l;
+        //}
+
+        //public string Analyse(string plainText, string cipherText)
+        //{
+        //    // throw new NotImplementedException();
+        //    //keyMAt * PM = CM
+
+        //    cipherText = cipherText.ToLower();
+
+        //    string result = "";
+        //    int temp = 4;
+
+        //    int[,] PTconverted = GetKeyMatrixDouble(plainText.Substring(0, temp));
+        //    int[,] CTconverted = GetKeyMatrixDouble(cipherText.Substring(0, temp));
+
+        //    int[,] Key = new int[2, 2];
+        //    int[,] res = new int[2, 2];
+        //    for (int j = 0; j < 26; j++)
+        //    {
+        //        for (int x = 0; x < 26; x++)
+        //        {
+        //            for (int y = 0; y < 26; y++)
+        //            {
+        //                for (int z = 0; z < 26; z++)
+        //                {
+
+        //                    Key[0, 0] = j;
+        //                    Key[0, 1] = x;
+        //                    Key[1, 0] = y;
+        //                    Key[1, 1] = z;
+
+        //                    res = multiply(Key, PTconverted);
+
+        //                    for (int m = 0; m < Key.GetLength(0); m++)
+        //                    {
+        //                        for (int w = 0; w < Key.GetLength(0); w++)
+        //                        {
+        //                            if (res[m, w] > 0)
+        //                            {
+        //                                res[m, w] %= 26;
+        //                            }
+        //                            else
+        //                            {
+        //                                while (res[m, w] < 0)
+        //                                    res[m, w] += 26;
+        //                            }
+        //                        }
+        //                    }
+
+        //                    if (res[0, 0] == CTconverted[0, 0] && res[0, 1] == CTconverted[0, 1]
+        //                        && res[1, 0] == CTconverted[1, 0]
+        //                        && res[1, 1] == CTconverted[1, 1])
+        //                    {
+        //                        break;
+        //                    }
+
+
+        //                }
+
+        //                if (res[0, 0] == CTconverted[0, 0] && res[0, 1] == CTconverted[0, 1] && res[1, 0] == CTconverted[1, 0] && res[1, 1] == CTconverted[1, 1])
+        //                {
+        //                    break;
+        //                }
+        //            }
+        //            if (res[0, 0] == CTconverted[0, 0] && res[0, 1] == CTconverted[0, 1] && res[1, 0] == CTconverted[1, 0] && res[1, 1] == CTconverted[1, 1])
+        //            {
+        //                break;
+        //            }
+        //        }
+        //        if (res[0, 0] == CTconverted[0, 0] && res[0, 1] == CTconverted[0, 1] && res[1, 0] == CTconverted[1, 0] && res[1, 1] == CTconverted[1, 1])
+        //        {
+        //            break;
+        //        }
+        //    }
+
+        //    string c = ConvertMatToString(Key);
+
+
+        //    string dres = Decrypt(cipherText, c);
+        //    dres = dres.ToLower();
+        //    if (dres == plainText)
+        //    {
+        //        return c;
+        //    }
+
+
+
+        //    return result;
+
+
+
+
+
+        //    //// throw new NotImplementedException();
+        //    ////keyMAt * PM = CM
+
+        //    //cipherText =  cipherText.ToLower();
+
+        //    //string result = "";
+        //    //int temp = 4;
+
+        //    ////int[,] PTconverted = GetKeyMatrixDouble(plainText.Substring(0, temp));
+
+        //    ////int[,] CTconverted = GetKeyMatrixDouble(cipherText.Substring(0, temp));
+
+
+        //    //int[,] PTconverted = { {15, 24 }, { 0 , 12} };
+
+        //    //int[,] CTconverted = { {19 , 18 }, {16 , 18} };
+
+        //    //PTconverted = keyInverse(PTconverted);
+
+        //    //int[,] Key = multiply(CTconverted, PTconverted);
+
+        //    //for (int j = 0; j < Key.GetLength(0); j++)
+        //    //{
+        //    //    for (int x = 0; x < Key.GetLength(0); x++)
+        //    //    {
+        //    //        if (Key[j, x] > 0)
+        //    //        {
+        //    //            Key[j, x] %= 26;
+        //    //        }
+        //    //        else
+        //    //        {
+        //    //            while (Key[j, x] < 0)
+        //    //                Key[j, x] += 26;
+        //    //        }
+        //    //    }
+        //    //}
+
+        //    //string c = ConvertMatToString(Key);
+
+
+        //    //string dres = Decrypt(cipherText, c);
+        //    //dres = dres.ToLower();
+        //    //if (dres == plainText)
+        //    //{
+        //    //    return c;
+        //    //}
+
+
+
+        //    //return result;
+        //}
+
+        //public List<int> Analyse3By3Key(List<int> plainText, List<int> cipherText)
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+        //public string Analyse3By3Key(string plainText, string cipherText)
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+
+
         public List<int> Analyse(List<int> plainText, List<int> cipherText)
         {
 
@@ -24,79 +192,166 @@ namespace SecurityLibrary
 
             return l;
         }
-
         public string Analyse(string plainText, string cipherText)
         {
-            // throw new NotImplementedException();
-            //keyMAt * PM = CM
+
+            //a b c d e f g h i j  k l  m   n  o  p q   r  s  t  u  v w   x  y  z
+            //0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 
+
+            // p a o r
+            // t q y p
+
+            //// throw new NotImplementedException();
+            ////keyMAt * PM = CM
 
             cipherText = cipherText.ToLower();
 
             string result = "";
             int temp = 4;
 
-            int[,] PTconverted = GetKeyMatrixDouble(plainText.Substring(0, temp));
-            int[,] CTconverted = GetKeyMatrixDouble(cipherText.Substring(0, temp));
+            int[,] PTconverted = new int[2, 2];
 
-            int[,] Key = new int[2, 2];
-            int[,] res = new int[2, 2];
-            for (int j = 0; j < 26; j++)
+
+            int[,] CTconverted = new int[2, 2];
+
+
+            for (int i = 2; i < plainText.Length - 1; i++)
             {
-                for (int x = 0; x < 26; x++)
+
+                PTconverted[0, 0] = plainText[0] - 'a';
+                PTconverted[0, 1] = plainText[1] - 'a';
+
+                PTconverted[1, 0] = plainText[i] - 'a';
+                PTconverted[1, 1] = plainText[i + 1] - 'a';
+
+                CTconverted[0, 0] = cipherText[0] - 'a';
+                CTconverted[0, 1] = cipherText[1] - 'a';
+                CTconverted[1, 0] = cipherText[i] - 'a';
+                CTconverted[1, 1] = cipherText[i + 1] - 'a';
+
+
+                //int[,] PTconverted = { { 15, 0 }, { 14, 17 } };
+
+                //int[,] CTconverted = { { 19, 16 }, { 24, 15 } };
+
+                PTconverted = keyInverse(PTconverted);
+
+                int[,] Key = multiply(PTconverted, CTconverted);
+
+                for (int j = 0; j < Key.GetLength(0); j++)
                 {
-                    for (int y = 0; y < 26; y++)
+                    for (int x = 0; x < Key.GetLength(0); x++)
                     {
-                        for (int z = 0; z < 26; z++)
+                        if (Key[j, x] > 0)
                         {
-
-                            Key[0, 0] = j;
-                            Key[0, 1] = x;
-                            Key[1, 0] = y;
-                            Key[1, 1] = z;
-
-                            res = multiply(Key, PTconverted);
-
-                            for (int m = 0; m < Key.GetLength(0); m++)
-                            {
-                                for (int w = 0; w < Key.GetLength(0); w++)
-                                {
-                                    if (res[m, w] > 0)
-                                    {
-                                        res[m, w] %= 26;
-                                    }
-                                    else
-                                    {
-                                        while (res[m, w] < 0)
-                                            res[m, w] += 26;
-                                    }
-                                }
-                            }
-
-                            if (res[0, 0] == CTconverted[0, 0] && res[0, 1] == CTconverted[0, 1]
-                                && res[1, 0] == CTconverted[1, 0]
-                                && res[1, 1] == CTconverted[1, 1])
-                            {
-                                break;
-                            }
-
-
+                            Key[j, x] %= 26;
                         }
-
-                        if (res[0, 0] == CTconverted[0, 0] && res[0, 1] == CTconverted[0, 1] && res[1, 0] == CTconverted[1, 0] && res[1, 1] == CTconverted[1, 1])
+                        else
                         {
-                            break;
+                            while (Key[j, x] < 0)
+                                Key[j, x] += 26;
                         }
-                    }
-                    if (res[0, 0] == CTconverted[0, 0] && res[0, 1] == CTconverted[0, 1] && res[1, 0] == CTconverted[1, 0] && res[1, 1] == CTconverted[1, 1])
-                    {
-                        break;
                     }
                 }
-                if (res[0, 0] == CTconverted[0, 0] && res[0, 1] == CTconverted[0, 1] && res[1, 0] == CTconverted[1, 0] && res[1, 1] == CTconverted[1, 1])
+
+
+                Matrix.Transpose(Key);
+
+                string c = ConvertMatToString(Key);
+
+
+                string dres = Decrypt(cipherText, c);
+                dres = dres.ToLower();
+                if (dres == plainText)
                 {
-                    break;
+                    return c;
                 }
             }
+
+            throw new InvalidAnlysisException();
+
+            return "";
+        }
+        public List<int> Analyse3By3Key(List<int> plainText, List<int> cipherText)
+        {
+            // throw new NotImplementedException();
+            string _plainText = convertListTOstring(plainText);
+            string _CipherTxt = convertListTOstring(cipherText);
+
+            string res = Analyse3By3Key(_plainText, _CipherTxt);
+
+            List<int> l = convertstringTOlist(res);
+
+            return l;
+        }
+        public string Analyse3By3Key(string plainText, string cipherText)
+        {
+            //a b c d e f g h i j  k l  m   n  o  p q   r  s  t  u  v w   x  y  z
+            //0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 
+
+            // p a o r
+            // t q y p
+
+            //// throw new NotImplementedException();
+            ////keyMAt * PM = CM
+
+            cipherText = cipherText.ToLower();
+
+            string result = "";
+
+            int[,] PTconverted = new int[3, 3];
+
+
+            int[,] CTconverted = new int[3, 3];
+
+
+            PTconverted[0, 0] = plainText[0] - 'a';
+            PTconverted[0, 1] = plainText[1] - 'a';
+            PTconverted[0, 2] = plainText[2] - 'a';
+            PTconverted[1, 0] = plainText[3] - 'a';
+            PTconverted[1, 1] = plainText[4] - 'a';
+            PTconverted[1, 2] = plainText[5] - 'a';
+            PTconverted[2, 0] = plainText[6] - 'a';
+            PTconverted[2, 1] = plainText[7] - 'a';
+            PTconverted[2, 2] = plainText[8] - 'a';
+
+            CTconverted[0, 0] = cipherText[0] - 'a';
+            CTconverted[0, 1] = cipherText[1] - 'a';
+            CTconverted[0, 2] = cipherText[2] - 'a';
+            CTconverted[1, 0] = cipherText[3] - 'a';
+            CTconverted[1, 1] = cipherText[4] - 'a';
+            CTconverted[1, 2] = cipherText[5] - 'a';
+            CTconverted[2, 0] = cipherText[6] - 'a';
+            CTconverted[2, 1] = cipherText[7] - 'a';
+            CTconverted[2, 2] = cipherText[8] - 'a';
+
+
+            //int[,] PTconverted = { { 15, 0 }, { 14, 17 } };
+
+            //int[,] CTconverted = { { 19, 16 }, { 24, 15 } };
+
+            PTconverted = keyInverse(PTconverted);
+
+            int[,] Key = multiply(PTconverted, CTconverted);
+
+            for (int j = 0; j < Key.GetLength(0); j++)
+            {
+                for (int x = 0; x < Key.GetLength(0); x++)
+                {
+                    if (Key[j, x] > 0)
+                    {
+                        Key[j, x] %= 26;
+                    }
+                    else
+                    {
+                        while (Key[j, x] < 0)
+                            Key[j, x] += 26;
+                    }
+                }
+            }
+
+
+            Matrix.Transpose(Key);
 
             string c = ConvertMatToString(Key);
 
@@ -107,85 +362,17 @@ namespace SecurityLibrary
             {
                 return c;
             }
-
-
+            else
+            {
+                throw new InvalidAnlysisException();
+            }
 
             return result;
-
-
-
-
-
-            //// throw new NotImplementedException();
-            ////keyMAt * PM = CM
-
-            //cipherText =  cipherText.ToLower();
-
-            //string result = "";
-            //int temp = 4;
-
-            ////int[,] PTconverted = GetKeyMatrixDouble(plainText.Substring(0, temp));
-
-            ////int[,] CTconverted = GetKeyMatrixDouble(cipherText.Substring(0, temp));
-
-
-            //int[,] PTconverted = { {15, 24 }, { 0 , 12} };
-
-            //int[,] CTconverted = { {19 , 18 }, {16 , 18} };
-
-            //PTconverted = keyInverse(PTconverted);
-
-            //int[,] Key = multiply(CTconverted, PTconverted);
-
-            //for (int j = 0; j < Key.GetLength(0); j++)
-            //{
-            //    for (int x = 0; x < Key.GetLength(0); x++)
-            //    {
-            //        if (Key[j, x] > 0)
-            //        {
-            //            Key[j, x] %= 26;
-            //        }
-            //        else
-            //        {
-            //            while (Key[j, x] < 0)
-            //                Key[j, x] += 26;
-            //        }
-            //    }
-            //}
-
-            //string c = ConvertMatToString(Key);
-
-
-            //string dres = Decrypt(cipherText, c);
-            //dres = dres.ToLower();
-            //if (dres == plainText)
-            //{
-            //    return c;
-            //}
-
-
-
-            //return result;
         }
-
-        public List<int> Analyse3By3Key(List<int> plainText, List<int> cipherText)
-        {
-            throw new NotImplementedException();
-        }
-
-        public string Analyse3By3Key(string plainText, string cipherText)
-        {
-            throw new NotImplementedException();
-        }
-
-
-
 
         //decreption...
-
-        public List<int> Decrypt(List<int> cipherText, List<int> key)
+        public bool ValidateDecrypt(List<int> cipherText, List<int> key)
         {
-
             string _cipherText = convertListTOstring(cipherText);
             string _Key = convertListTOstring(key);
 
@@ -194,6 +381,31 @@ namespace SecurityLibrary
             plainRes = plainRes.ToLower();
             List<int> res = convertstringTOlist(plainRes);
 
+            string cstr = Encrypt(plainRes, _Key);
+            if (cstr != _cipherText)
+            {
+
+                return true;
+            }
+
+            return false;
+        }
+
+        public List<int> Decrypt(List<int> cipherText, List<int> key)
+        {
+
+            if (!ValidateDecrypt(cipherText, key))
+            {
+                throw new InvalidAnlysisException();
+            }
+
+            string _cipherText = convertListTOstring(cipherText);
+            string _Key = convertListTOstring(key);
+
+            string plainRes = Decrypt(_cipherText, _Key);
+
+            plainRes = plainRes.ToLower();
+            List<int> res = convertstringTOlist(plainRes);
 
             return res;
 
@@ -253,7 +465,6 @@ namespace SecurityLibrary
 
             return res;
         }
-
         public string Encrypt(string plainText, string key)
         {
             //remove spaces
@@ -515,6 +726,7 @@ namespace SecurityLibrary
             if (!check) //====== no multiplicative inverse found
             {
                 //throw new MatrixClassException("no multiplicative inverse found");
+                //throw new InvalidAnlysisException();
             }
 
             //===== Apply rule kij ={b x (-1)i+j * Dij mod 26} mod 26

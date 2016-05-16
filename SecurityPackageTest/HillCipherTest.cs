@@ -40,6 +40,10 @@ namespace SecurityPackageTest
         List<int> cipher4 = new List<int> { 7, 6, 17, 25, 4, 20, 3, 21, 16 };
         List<int> key4 = new List<int> { 1, 10, 0, 0, 20, 1, 2, 15, 2 };
 
+        string newPlain = "thegoldisburiedinorono";
+        string newCipher = "gzscxnvcdjzxeovcrclsrc".ToUpper();
+        string newKey = "frep";
+
         [TestMethod]
         public void HillCipherTestEnc1()
         {
@@ -149,9 +153,9 @@ namespace SecurityPackageTest
         [ExpectedException(typeof(InvalidAnlysisException), AllowDerivedTypes = true)]
         public void HillCipherError4()
         {
-            /*HillCipher algorithm = new HillCipher();
+            HillCipher algorithm = new HillCipher();
             string key = algorithm.Analyse3By3Key(mainPlain, cipherS3);
-            Assert.IsTrue(key.Equals(keyS3, StringComparison.InvariantCultureIgnoreCase));*/
+            Assert.IsTrue(key.Equals(keyS3, StringComparison.InvariantCultureIgnoreCase));
         }
 
         [TestMethod]
@@ -197,9 +201,9 @@ namespace SecurityPackageTest
         [TestMethod]
         public void HillCipherTest3By3Analysis1()
         {
-            /*HillCipher algorithm = new HillCipher();
+            HillCipher algorithm = new HillCipher();
             string key = algorithm.Analyse3By3Key(mainPlain3, mainCipher3);
-            Assert.IsTrue(key.Equals(mainKey3, StringComparison.InvariantCultureIgnoreCase));*/
+            Assert.IsTrue(key.Equals(mainKey3, StringComparison.InvariantCultureIgnoreCase));
         }
 
         [TestMethod]
@@ -229,13 +233,37 @@ namespace SecurityPackageTest
         [TestMethod]
         public void HillCipherTest3By3Analysis2()
         {
-         /*   HillCipher algorithm = new HillCipher();
+            HillCipher algorithm = new HillCipher();
 
             List<int> key2 = algorithm.Analyse3By3Key(plain4, cipher4);
             for (int i = 0; i < key4.Count; i++)
             {
                 Assert.AreEqual(key4[i], key2[i]);
-            }*/
+            }
+        }
+
+        [TestMethod]
+        public void HillCipherTestNewEnc()
+        {
+            HillCipher algorithm = new HillCipher();
+            string cipher = algorithm.Encrypt(newPlain, newKey);
+            Assert.IsTrue(cipher.Equals(newCipher, StringComparison.InvariantCultureIgnoreCase));
+        }
+
+        [TestMethod]
+        public void HillCipherTestNewDec()
+        {
+            HillCipher algorithm = new HillCipher();
+            string plain = algorithm.Decrypt(newCipher, newKey);
+            Assert.IsTrue(plain.Equals(newPlain, StringComparison.InvariantCultureIgnoreCase));
+        }
+
+        [TestMethod]
+        public void HillCipherTestNew2By2Analysis()
+        {
+            HillCipher algorithm = new HillCipher();
+            string key = algorithm.Analyse(newPlain, newCipher);
+            Assert.IsTrue(key.Equals(newKey, StringComparison.InvariantCultureIgnoreCase));
         }
     }
 }

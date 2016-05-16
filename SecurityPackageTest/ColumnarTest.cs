@@ -27,6 +27,11 @@ namespace SecurityPackageTest
         List<int> mainkey1 = new List<int>() { 1, 3, 4, 2, 5 };
         List<int> mainkey2 = new List<int>() { 1, 4, 3, 2 };
 
+        string newPlain = "defendtheeastwallofthecastleee";
+        string newCipher = "nalceehwttdttfseeleedsoaefeahl";
+        
+        List<int> newKey = new List<int>() { 3, 2, 6, 4, 1, 5 };
+
         [TestMethod]
         public void ColumnarTestEnc1()
         {
@@ -119,6 +124,34 @@ namespace SecurityPackageTest
             for (int i = 0; i < mainkey2.Count; i++)
             {
                 Assert.IsTrue(mainkey2[i] == key1[i] || mainkey2[i] == key2[i]);
+            }
+        }
+
+        [TestMethod]
+        public void ColumnarNewTestEnc()
+        {
+            Columnar algorithm = new Columnar();
+            string cipher = algorithm.Encrypt(newPlain, newKey);
+            Assert.IsTrue(cipher.Equals(newCipher, StringComparison.InvariantCultureIgnoreCase));
+        }
+
+        [TestMethod]
+        public void ColumnarNewTestDec()
+        {
+            Columnar algorithm = new Columnar();
+            string plain1 = algorithm.Decrypt(newCipher, newKey);
+
+            Assert.IsTrue(plain1.Equals(newPlain, StringComparison.InvariantCultureIgnoreCase));
+        }
+
+        [TestMethod]
+        public void ColumnarNewTestAnalysis()
+        {
+            Columnar algorithm = new Columnar();
+            List<int> key1 = algorithm.Analyse(newPlain, newCipher);
+            for (int i = 0; i < newKey.Count; i++)
+            {
+                Assert.IsTrue(newKey[i] == key1[i]);
             }
         }
     }

@@ -31,6 +31,10 @@ namespace SecurityLibrary
 
         public string Analyse(string plainText, string cipherText)
         {
+            throw new NotSupportedException();
+        }
+        public string Analyse(string plainText)
+        {
             throw new NotImplementedException();
         }
 

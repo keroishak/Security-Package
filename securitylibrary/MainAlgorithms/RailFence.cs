@@ -53,8 +53,10 @@ namespace SecurityLibrary
             // throw new NotImplementedException();
 
             int numCols = (cipherText.Length / key);
+
             if (cipherText.Length % key != 0)
                 numCols++;
+
             char[,] arr = new char[key, numCols];
             int index = 0;
 
@@ -93,6 +95,7 @@ namespace SecurityLibrary
             if (plainText.Length % key != 0)
                 numCols++;
             char[,] arr = new char[key, numCols];
+
             int index = 0;
             for (int j = 0; j < arr.GetLength(1); j++)
             {

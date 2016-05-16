@@ -21,6 +21,11 @@ namespace SecurityPackageTest
         string mainCipherTriple = "0x85E813540F0AB405";
         List<string> mainKeyTriple =  new List<string>() {"0x133457799BBCDFF1", "0x133457799BBCDFF1" };
 
+
+        string newPlain = "0x6D6573736167652E";
+        string newCipher = "0x7CF45E129445D451";
+        string newKey = "0x38627974656B6579";
+
         [TestMethod]
         public void DESTestEnc1()
         {
@@ -69,5 +74,21 @@ namespace SecurityPackageTest
             Assert.IsTrue(plain.Equals(mainPlainTriple, StringComparison.InvariantCultureIgnoreCase));
         }
 
+
+        [TestMethod]
+        public void DESTestNewEnc()
+        {
+            DES algorithm = new DES();
+            string cipher = algorithm.Encrypt(newPlain, newKey);
+            Assert.IsTrue(cipher.Equals(newCipher, StringComparison.InvariantCultureIgnoreCase));
+        }
+
+        [TestMethod]
+        public void DESTestNewDec()
+        {
+            DES algorithm = new DES();
+            string plain = algorithm.Decrypt(newCipher, newKey);
+            Assert.IsTrue(plain.Equals(newPlain, StringComparison.InvariantCultureIgnoreCase));
+        }
     }
 }

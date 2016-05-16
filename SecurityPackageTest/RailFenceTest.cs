@@ -18,6 +18,10 @@ namespace SecurityPackageTest
         int mainKey = 2;
         int mainKey2 = 3;
 
+        string newPlain = "nothingisasitseems";
+        string newCipher = "NTIGSSTEMOHNIAISES";
+        int newkey = 2;
+
         [TestMethod]
         public void RailFenceTestEnc1()
         {
@@ -71,6 +75,31 @@ namespace SecurityPackageTest
             int key = algorithm.Analyse(mainPlain1, mainCipher2);
             int key2 = algorithm.Analyse(mainPlain1, mainCipher3);
             Assert.IsTrue(mainKey2 ==  key || mainKey2 == key2);
+        }
+
+
+        [TestMethod]
+        public void RailFenceTestNewEnc()
+        {
+            RailFence algorithm = new RailFence();
+            string cipher = algorithm.Encrypt(newPlain, newkey);
+            Assert.IsTrue(cipher.Equals(newCipher, StringComparison.InvariantCultureIgnoreCase));
+        }
+
+        [TestMethod]
+        public void RailFenceTestNewDec()
+        {
+            RailFence algorithm = new RailFence();
+            string plain = algorithm.Decrypt(newCipher, newkey);
+            Assert.IsTrue(plain.Equals(newPlain, StringComparison.InvariantCultureIgnoreCase));
+        }
+
+        [TestMethod]
+        public void RailFenceTestNewAnalysis()
+        {
+            RailFence algorithm = new RailFence();
+            int key = algorithm.Analyse(newPlain, newCipher);
+            Assert.AreEqual(newkey, key);
         }
     }
 }

@@ -54,5 +54,21 @@ namespace SecurityPackageTest
             int plain = algorithm.Decrypt(61, 53, 2338, 7);
             Assert.AreEqual(plain, 70);
         }
+
+        [TestMethod]
+        public void RSATestNewEnc()
+        {
+            RSA algorithm = new RSA();
+            int cipher = algorithm.Encrypt(257, 337, 18537, 17);
+            Assert.AreEqual(cipher, 12448);
+        }
+
+        [TestMethod]
+        public void RSATestNewDec4()
+        {
+            RSA algorithm = new RSA();
+            int plain = algorithm.Decrypt(257, 337, 12448, 17);
+            Assert.AreEqual(plain, 18537);
+        }
     }
 }

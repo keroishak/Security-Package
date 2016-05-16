@@ -22,6 +22,10 @@ namespace SecurityPackageTest
         string mainCipher2 = "dlfdsdndihbddtntuebluoimcvbserulyo".ToUpper();
         string mainCipher22 = "dlfdsdndjhbddtntuebluojmcvbserulyo".ToUpper();
 
+        string newPlain = "iseeyouthere";
+        string newKey = "RPMLDSAXICHKQUYEWOZGBFTVN".ToLower();
+        string newCipher = "CAOSGHZQBQBSOS".ToUpper();
+
 
         [TestMethod]
         public void PlayfairTestEnc1()
@@ -98,15 +102,32 @@ namespace SecurityPackageTest
             Assert.IsTrue(plain.Equals(largePlain, StringComparison.InvariantCultureIgnoreCase));
         }
 
+        [Ignore]
         [TestMethod]
         public void PlayfairTestBonusAnalysis()
         {
-            /*PlayFair algorithm = new PlayFair();
-            //string plain = algorithm.Analyse(largeCipher);
+            PlayFair algorithm = new PlayFair();
+            string plain = algorithm.Analyse(largeCipher);
             int count = Enumerable.Range(0, largePlainForAnlysis.Length)
               .Count(i => largePlainForAnlysis[i] == plain[i]);
 
-            Assert.IsTrue(count * 100 / largePlain.Length > 50);*/
+            Assert.IsTrue(count * 100 / largePlain.Length > 50);
+        }
+
+        [TestMethod]
+        public void PlayfairTestNewEnc()
+        {
+            PlayFair algorithm = new PlayFair();
+            string cipher = algorithm.Encrypt(newPlain, newKey);
+            Assert.IsTrue(cipher.Equals(newCipher, StringComparison.InvariantCultureIgnoreCase));
+        }
+
+        [TestMethod]
+        public void PlayfairTestNewDec()
+        {
+            PlayFair algorithm = new PlayFair();
+            string plain = algorithm.Decrypt(newCipher, newKey);
+            Assert.IsTrue(plain.Equals(newPlain, StringComparison.InvariantCultureIgnoreCase));
         }
 
 

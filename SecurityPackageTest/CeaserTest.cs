@@ -19,6 +19,10 @@ namespace SecurityPackageTest
         string mainCipher2 = "bcdclbrfccyqruyjjmdrfcayqrjc".ToUpper();
         int mainKey2 = 24;
 
+        string newPlain = "THEQUICKBROWNFOXJUMPSOVERTHELAZYDOG".ToLower();
+        string newCipher = "WKHTXLFNEURZQIRAMXPSVRYHUWKHODCBGRJ".ToUpper();
+        int newKey = 3;
+
         [TestMethod]
         public void CeaserTestEnc1()
         {
@@ -91,5 +95,28 @@ namespace SecurityPackageTest
             Assert.AreEqual(mainKey2, key);
         }
 
+        [TestMethod]
+        public void CeaserTestNewEnc1()
+        {
+            Ceaser algorithm = new Ceaser();
+            string cipher = algorithm.Encrypt(newPlain, newKey);
+            Assert.IsTrue(cipher.Equals(newCipher, StringComparison.InvariantCultureIgnoreCase));
+        }
+
+        [TestMethod]
+        public void CeaserTestNewDec1()
+        {
+            Ceaser algorithm = new Ceaser();
+            string plain = algorithm.Decrypt(newCipher, newKey);
+            Assert.IsTrue(plain.Equals(newPlain, StringComparison.InvariantCultureIgnoreCase));
+        }
+
+        [TestMethod]
+        public void CeaserTestNewAnalysis1()
+        {
+            Ceaser algorithm = new Ceaser();
+            int key = algorithm.Analyse(newPlain, newCipher);
+            Assert.AreEqual(newKey, key);
+        }
     }
 }
